@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-{
+//{
     /*
     Console.WriteLine("Hello, World!");
     {
@@ -76,13 +76,59 @@
     {
         Console.Write("Сумма не может быть меньше 0");
     }
+    }
     */
    
-}
+
 
 int x = 1;
 if (x == 1)
 {
     Console.WriteLine("1");
 }
+else if (x==2)
+{
+    Console.WriteLine("2");
+}
+else
+{
+    Console.WriteLine("Не соответствует условям");
+}
 
+
+switch (x)
+{
+   case 1 :
+       Console.WriteLine("1");
+       break;
+   case 2:
+       Console.WriteLine("2");
+       break;
+   default:
+       Console.WriteLine("Не соответствует условям");
+}
+
+
+string name = "Tom";
+
+switch (name)
+{
+    case "Alex":
+        Console.WriteLine("Alex");
+        break;
+    case "Tom":
+        Console.WriteLine("Tom");
+        break;
+}
+
+string name1 = "Tom";
+
+switch (name1.Equals("Alex"))
+{
+    case true:
+        Console.WriteLine("Alex");
+        break;
+    case false:
+        Console.WriteLine("Tom");
+        break;
+}
