@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Павел\\Work\\AQA_MTS\\TypesAndOperators\\TypesAndOperators.csproj",
+      "projectUniqueName": "C:\\Users\\Павел\\RiderProjects\\AQA_MTS\\Aqa_MTS\\TypesAndOperators\\TypesAndOperators.csproj",
       "projectName": "TypesAndOperators",
-      "projectPath": "C:\\Users\\Павел\\Work\\AQA_MTS\\TypesAndOperators\\TypesAndOperators.csproj",
+      "projectPath": "C:\\Users\\Павел\\RiderProjects\\AQA_MTS\\Aqa_MTS\\TypesAndOperators\\TypesAndOperators.csproj",
       "packagesPath": "C:\\Users\\Павел\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Павел\\Work\\AQA_MTS\\TypesAndOperators\\obj\\",
+      "outputPath": "C:\\Users\\Павел\\RiderProjects\\AQA_MTS\\Aqa_MTS\\TypesAndOperators\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
