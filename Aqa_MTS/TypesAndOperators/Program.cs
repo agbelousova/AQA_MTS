@@ -30,6 +30,7 @@
     //подготовка данных
     
     /*
+     
     bool isWhiteBreadFresh = true;
     ushort whiteBreadPrice = 150;
     ushort butterPrice = 230;
