@@ -77,8 +77,12 @@
         Console.Write("Сумма не может быть меньше 0");
     }
     */
-    
    
 }
 
+int x = 1;
+if (x == 1)
+{
+    Console.WriteLine("1");
+}
 
