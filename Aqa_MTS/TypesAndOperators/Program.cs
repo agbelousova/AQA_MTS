@@ -29,6 +29,7 @@
     //решение задачи
     //подготовка данных
     
+    /*
     bool isWhiteBreadFresh = true;
     ushort whiteBreadPrice = 150;
     ushort butterPrice = 230;
@@ -74,6 +75,7 @@
     {
         Console.Write("Сумма не может быть меньше 0");
     }
+    */
     
    
 }
