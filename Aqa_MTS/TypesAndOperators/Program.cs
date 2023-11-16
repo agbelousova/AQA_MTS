@@ -81,6 +81,7 @@
    
 
 
+/*
 int x = 1;
 if (x == 1)
 {
@@ -131,4 +132,4 @@ switch (name1.Equals("Alex"))
     case false:
         Console.WriteLine("Tom");
         break;
-}
+}*/
