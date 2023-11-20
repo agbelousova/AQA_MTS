@@ -70,23 +70,29 @@ string? chisloString = Console.ReadLine();
 int chislo = Convert.ToInt32(chisloString);
 
 //использоване оператора if для выбора промежутка
-
-if ((chislo >= -40) && (chislo <= -10))
+if ((chislo >= -50) && (chislo <= 50))
 {
-    Console.WriteLine("Введенное число попало в промежуток [-40, -10]");
-} else if ((chislo >= -9) && (chislo <= 0))
-{
-    Console.WriteLine("Введенное число попало в промежуток [-9, 0]");
-} else if ((chislo >= 1) && (chislo <= 10))
-{
-    Console.WriteLine("Введенное число попало в промежуток [1, 10]");
-} else if ((chislo >= 11) && (chislo <= 40))
-{
-    Console.WriteLine("Введенное число попало в промежуток [11, 40]");
+    if ((chislo >= -40) && (chislo <= -10))
+    {
+        Console.WriteLine("Введенное число попало в промежуток [-40, -10]");
+    } else if ((chislo >= -9) && (chislo <= 0))
+    {
+       Console.WriteLine("Введенное число попало в промежуток [-9, 0]");
+    } else if ((chislo >= 1) && (chislo <= 10))
+    {
+       Console.WriteLine("Введенное число попало в промежуток [1, 10]");
+    } else if ((chislo >= 11) && (chislo <= 40))
+    {
+       Console.WriteLine("Введенное число попало в промежуток [11, 40]");
+    }
+    else
+    {
+    Console.WriteLine("Введенное число не попало ни в один доступный промежуток");
+    }
 }
 else
 {
-    Console.WriteLine("Введенное число не попало ни в один доступный промежуток");
+    Console.WriteLine("Введенное число не попало в промежуток от -50 до 50");
 }
 */
 
@@ -99,7 +105,7 @@ else
     Если пользователь ввел слово, для которого отсутствует перевод, то следует вывести сообщение, что такого слова нет.
     */
 
-
+/*
 Console.Write("Вас приветствует русско-английский переводчик. \nПрограмма знает 10 слов о погоде.\nВведите ваше слово: ");
 string? slovo = Console.ReadLine();
 
@@ -139,7 +145,7 @@ switch (slovo)
         Console.WriteLine("Такого слова нет");
         break;
 }
-
+*/
 
 //задане 4
 /*
