@@ -2,7 +2,7 @@
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             /*
             // Declare without initializing.
@@ -192,8 +192,11 @@ namespace StringApp // Note: actual namespace depends on the project name.
             string join_str_final = string.Join(" ", str_array);
             Console.WriteLine($"Join: {join_str_final}");
 */
+            
+            
             // -=================== Comparison (Сравнение строк) ===================
             // -=================== Сравнение на равенство
+            /*
             string comp_str1 = "hello";
             string comp_str2 = "hello";
 
@@ -205,7 +208,8 @@ namespace StringApp // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine($"Compare: {comp_str1.CompareTo(item)}");
             }
-
+            */
+            
             /*
              * 0 - идентичны
              * < 0 - строка 1 перед строкой 2 по алфавиту
