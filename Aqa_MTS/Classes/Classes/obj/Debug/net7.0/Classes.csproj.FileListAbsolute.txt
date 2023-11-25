@@ -1,0 +1,4 @@
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Classes\Classes\obj\Debug\net7.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Classes\Classes\obj\Debug\net7.0\Classes.AssemblyInfoInputs.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Classes\Classes\obj\Debug\net7.0\Classes.AssemblyInfo.cs
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Classes\Classes\obj\Debug\net7.0\Classes.csproj.CoreCompileInputs.cache
