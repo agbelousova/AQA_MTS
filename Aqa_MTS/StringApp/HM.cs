@@ -9,13 +9,15 @@ namespace StringApp
             //Задание 1:
             // Заменить в строке все вхождения 'test' на 'testing'. Удалить из текста все символы, являющиеся цифрами.
 
-            /*
+            Console.WriteLine("\n================\n");
+            
             string str = "10test5ew0dwe00dte1sttestwewefef1550test5dvs45test515dstesteftecf540test";
             string fstr = "test";
             string insertStr = "testing";
-
+            Console.WriteLine($"Изначальная строка: \n{str}");
+            
             string replacedString1 = str.Replace("test", "testing");
-            Console.WriteLine($"Новая строка с заменой: \n{replacedString1}");
+            Console.WriteLine($"Новая строка с заменой: 'test' на 'testing':\n{replacedString1}");
 
                 for (int i = 0; i < replacedString1.Length; i++)
               {
@@ -27,144 +29,50 @@ namespace StringApp
                   }
                }
                 Console.WriteLine($"Новая строка без цифр: \n{replacedString1}");
-                */
+
+                Console.WriteLine("\n================\n");
             //Задание 2
             // Используя метод вывода значения в консоль, выполните конкатенацию слов и выведите на экран следующую фразу:
             // Welcome to the TMS lesons.
             //     Каждое слово должно быть записано отдельно и взято в кавычки, например "Welcome". Не забывайте о пробелах после каждого слова
 
-            // string str = "Welcome to the TMS lesons.";
+            Console.WriteLine("\"Welcome\" " + "\"to\" " + "\"the\" "+ "\"TMS\" "+ "\"lesons\".");
+            Console.WriteLine("\n================\n");
+            // Задание 3
+            // Дана строка: “teamwithsomeofexcersicesabcwanttomakeitbetter.”
+            //Необходимо найти в данной строке "abc", записав всё что до этих символов в первую переменную, а также всё, что после них во вторую.
+            //    Результат вывести в консоль.
 
-            // -=================== Find subString (Поиск подстроки) ===================
-
-
-            // -=================== IndexOf and IndexOfAny
-            /*Console.WriteLine($"IndexOf 'j' (С учетом регистра): {f_str.IndexOf('j')}"); // С учетом регистра
-            Console.WriteLine($"IndexOf 'J' (С учетом регистра): {f_str.IndexOf('J')}"); // С учетом регистра
-            Console.WriteLine(
-                $"IndexOf 'J' (Без учета регистра): {f_str.IndexOf('J', StringComparison.OrdinalIgnoreCase)}"); // Без учета регистра
-            Console.WriteLine(
-                $"IndexOf 'j' (С указанием начала поиска): {f_str.IndexOf('j', 9)}"); // С указанием начала поиска
-
-            char[] chars1 = { 'T', 'o', 's' };
-            char[] chars2 = { '!', '=', '^' };
-
-            Console.WriteLine($"IndexOfAny 'chars1': {f_str.IndexOfAny(chars1)}");
-            Console.WriteLine($"IndexOfAny 'chars1': {f_str.IndexOfAny(chars1, 2)}");
-            Console.WriteLine($"IndexOfAny 'chars2': {f_str.IndexOfAny(chars2)}");
-
-            Console.WriteLine($"IndexOf 'i': {f_str.IndexOf('i')}");
-            Console.WriteLine($"LastIndexOf 'i': {f_str.LastIndexOf("i")}");
-            // -=================== Insert (Вставка) ===================
-            string originalInsertString = "Hello, world!";*/
-
-            // string str = "Welcome to the TMS lesons.";
-            /*
-            // Пример вставки подстроки в середину строки
-            string insertedString = f_str.Insert(f_str.IndexOf('i'), "1 ");
-            Console.WriteLine($"Insert (в середине): {insertedString}");
-            string replacedString1;
-            if ( replacedString1 = str.Replace("Welcome", "Welcome"))
-            Console.WriteLine($"Replace: {replacedString1}");
-            */
-
-            // Пример 2: Проверка наличия подстроки (регистронезависимая)
-            /*bool containsSubstring2 = str.Contains("Welcome", StringComparison.OrdinalIgnoreCase);
-
-            if (containsSubstring2 == true)
-            {
-                str = (""", + ");
-                string replacedString1 = str.Replace("Welcome", "",""testing");
-            }
-
-            Console.WriteLine($"Contains (регистронезависимая): {containsSubstring2}");
-            */
-
-            // -=================== AppendLine
-            // "Welcome to the TMS lesons.";
-            /*
-            StringBuilder sbAppendLine = new StringBuilder();
-            sbAppendLine.Insert(0, "\"").AppendLine("Welcome");
-           // sbAppendLine.Insert(sbAppendLine.Length, "\"");
-            sbAppendLine.AppendLine("to");
-            sbAppendLine.AppendLine("TMS");
-            sbAppendLine.AppendLine("lesons.");
-
-            Console.WriteLine($"AppendLine :  {sbAppendLine}");
-            */
             
-            string str = "Welcome to the TMS lesons.";
-            
-           string str2; // = str.Replace("Welcome", "\"Welcome\") + str.Replace("to", "\"to\"");
-            /*
-            string replacedString1;
-            bool containsWel = str.Contains("Welcome", StringComparison.OrdinalIgnoreCase);
-            bool containsTo = str.Contains("to", StringComparison.OrdinalIgnoreCase);
-            bool containsThe = str.Contains("the", StringComparison.OrdinalIgnoreCase);
-            bool containsTMS = str.Contains("TMS", StringComparison.OrdinalIgnoreCase);
-            bool containsLes = str.Contains("lesons", StringComparison.OrdinalIgnoreCase);
+            string str1 = "teamwithsomeofexcersicesabcwanttomakeitbetter.";
+            Console.WriteLine($"Строка = {str1}");
+            int startIndex = str1.IndexOf("abc");
+            string str12 = str1.Substring(0, startIndex);
+            string str13 = str1.Substring(startIndex+3);
+            Console.WriteLine($"Строка до abc = {str12}");
+            Console.WriteLine($"Строка после abc = {str13}");
+            Console.WriteLine("\n================\n");
 
-            string insertedString;*/
-            
-            for (int i = 1; i < str.Length; i++)
-            {
-             int j = str.IndexOf(' ');
-               str2 = str.Insert(j, "\"");
-                i ++;
-                Console.WriteLine($"Новая строка: {str2}");
-            }
-            
-            /*
-            if (char.IsDigit(replacedString1[i]))
-                {
-                    string removedSubstring2 = replacedString1.Remove(i, 1);
-                    replacedString1 = removedSubstring2;
-                    i -= 1;
-                }
-            }
-            Console.WriteLine($"Новая строка без цифр: \n{replacedString1}");
-            
-            
-            foreach (var word in str)
-            {
-                str2 = str.Replace("Welcome", "\"Welcome\"");
-                
-            if (containsWel == true)
-            {
-                   str2 = str.Replace("Welcome", "\"Welcome\"");
-                Console.WriteLine($"Строка: {str}");
-            } 
-            if (containsTo == true)
-            {
-                // replacedString1 = 
-                str.Replace("to", "\"to\"");
-                Console.WriteLine($"Строка: {str}");
-            }
-            if (containsThe == true)
-            {
-                // replacedString1 = 
-                str.Replace("the", "\"the\"");
-                Console.WriteLine($"Строка: {str}");
-            }
-            if (containsTMS == true)
-            {
-                // replacedString1 = 
-                str.Replace("TMS", "\"TMS\"");
-                Console.WriteLine($"Строка: {str}");
-            }
-            if (containsLes == true)
-            {
-                // replacedString1 = 
-                str.Replace("Welcome", "\"lesons\"");
-                Console.WriteLine($"Строка: {str}");
-            }*/
-           // Console.WriteLine($"Строка: {replacedString1}");
-        //string insertedAtStart = sbAppendLine.Insert(0, "Greeting: ");
-           /* Вывод:
-              Hello,
-              world!
-              How are you?
-           */
+            //    Задание 4
+            // Дана строка: “Плохой день.”
+            //Необходимо с помощью метода substring удалить слово "плохой". После чего необходимо используя команду
+            //insert создать строку со значением: Хороший день!!!!!!!!!.
+            //Заменить последний "!" на "?"
+
+            string str11 = "Плохой день.";
+            string strZamena = "плохой";
+            Console.WriteLine($"Строка = {str11}");
+            string str211 = str11.Substring(strZamena.Length);
+// Console.WriteLine($"Строка 2 = {str2}");
+
+            string insertedAtStart = str211.Insert(0, "Хороший");
+// Console.WriteLine($"Insert (в начале): {insertedAtStart}");     
+
+            string insertedAtEnd = insertedAtStart.Insert(insertedAtStart.Length - 1, "!!!!!!!!!");
+// Console.WriteLine($"Insert (в конце): {insertedAtEnd}");
+            string removedFromEnd = insertedAtEnd.Remove(insertedAtEnd.Length - 2, 2) + "?";
+            Console.WriteLine($"Новая строка: {removedFromEnd}");
+            Console.WriteLine("\n================\n");
         }
     }
 }
