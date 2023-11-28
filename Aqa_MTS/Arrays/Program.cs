@@ -406,7 +406,7 @@ for (int i = 0; i <= numbers.GetUpperBound(0); i++)
 */
 
 //================Задача
-int[] nums = { -4, 8, 10, 2, 12, 0, 5, 6};
+/*int[] nums = { -4, 8, 10, 2, 12, 0, 5, 6};
 
 foreach (int item in nums)
 {
@@ -417,7 +417,7 @@ Console.WriteLine();
 nums[0] <-> nums[nums.Length - 1 - 0]
 nums[1] <-> nums[nums.Length - 1 - 1]
 nums[2] <-> nums[nums.Length - 1 - 2]
-*/
+#1#
 
 int n = nums.Length; // Длинна массива
 int k = n / 2;
@@ -441,4 +441,4 @@ Array.Reverse(nums);
 foreach (int item in nums)
 {
     Console.Write($"{item} \t");
-}
+}*/
