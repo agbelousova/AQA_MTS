@@ -10,7 +10,6 @@ namespace StringApp
             // Заменить в строке все вхождения 'test' на 'testing'. Удалить из текста все символы, являющиеся цифрами.
 
             Console.WriteLine("\n================\n");
-            
             string str = "10test5ew0dwe00dte1sttestwewefef1550test5dvs45test515dstesteftecf540test";
             string fstr = "test";
             string insertStr = "testing";
