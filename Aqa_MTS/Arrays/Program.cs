@@ -128,7 +128,7 @@ for (int i = 0; i < rows; i++)
 //Создайте массив целых чисел. Напишете программу, которая выводит сообщение о том, 
 //входит ли заданное число в массив или нет. 
 //Пусть число для поиска задается с консоли.
-/*
+
 int[] array = { 10, -6, 3, -9, 5 , -7 , 0, 9};
 
 Console.Write("Введите целое число от -10 до 10: ");
@@ -156,7 +156,7 @@ if (flag == true)
 else {
     Console.WriteLine("Введенное число НЕ входит в массив");
 }
-*/
+
       
 /*
 Задание 2
@@ -406,7 +406,7 @@ for (int i = 0; i <= numbers.GetUpperBound(0); i++)
 */
 
 //================Задача
-int[] nums = { -4, 8, 10, 2, 12, 0, 5, 6};
+/*int[] nums = { -4, 8, 10, 2, 12, 0, 5, 6};
 
 foreach (int item in nums)
 {
@@ -417,7 +417,7 @@ Console.WriteLine();
 nums[0] <-> nums[nums.Length - 1 - 0]
 nums[1] <-> nums[nums.Length - 1 - 1]
 nums[2] <-> nums[nums.Length - 1 - 2]
-*/
+#1#
 
 int n = nums.Length; // Длинна массива
 int k = n / 2;
@@ -441,4 +441,4 @@ Array.Reverse(nums);
 foreach (int item in nums)
 {
     Console.Write($"{item} \t");
-}
+}*/

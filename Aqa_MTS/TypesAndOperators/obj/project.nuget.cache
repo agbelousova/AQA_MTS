@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Ph0IIRwQVKNzcpsuzTdo39PTTUeKxfB2ue+yBnV4nileN0roqGpSzTSfwLpCD3VOgj+uweVnMTfRdBKDIH2E4w==",
+  "dgSpecHash": "9VWxsLHLy/H8+pLQoZjndiUlsy2sOPaaXv4wQ596atUYrdwgyX5FFJkO237O7NRx1+D5Svwd39zSdolYSSpL/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Павел\\RiderProjects\\AQA_MTS\\Aqa_MTS\\TypesAndOperators\\TypesAndOperators.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

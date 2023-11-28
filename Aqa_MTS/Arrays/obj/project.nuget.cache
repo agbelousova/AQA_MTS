@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "44u5rmsSpvU57FvKkngfLxd+l+2keWzjfxYHIWXuYeOe9z3MLKs49CH/Y/radxkOKinPEYHwik1WXjJR4gmZbw==",
+  "dgSpecHash": "sBCoUJ8oq8S0AWRNZy8bhQHiT5PjlexG6uyIXnW9Cm5A6k1rzb2LwoBToUkcdhKs8vkzJ2ztp5B0KDpCoHKhqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Павел\\RiderProjects\\AQA_MTS\\Aqa_MTS\\Arrays\\Arrays.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
