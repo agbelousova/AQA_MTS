@@ -1,4 +1,4 @@
-/*namespace Classes;
+namespace Classes;
 
 public class ConstructorFull
 {
@@ -13,4 +13,8 @@ public class ConstructorFull
     public ConstructorFull(string text)
     {
     }
-}*/
+    
+    public ConstructorFull(int size, string text)
+    {
+    }
+}

@@ -1,4 +1,4 @@
-/*namespace Classes;
+namespace Classes;
 
 public class ConstructorCustom
 {
@@ -9,4 +9,4 @@ public class ConstructorCustom
     public ConstructorCustom(string text)
     {
     }
-}*/
+}

@@ -1,6 +1,8 @@
 ﻿//using System.Security.Cryptography.X509Certificates;
 //using Classes.Models;
 
+using Classes.Models;
+
 namespace Classes
 {
     class Program
@@ -41,7 +43,7 @@ namespace Classes
                 Console.WriteLine();
             }
             
-            /*
+           
             // -=================== Метод без параметров ===================-
             void MethodWithoutParameters()
             {
@@ -211,7 +213,7 @@ namespace Classes
             personPrimaryConstructors4.Print();
             
             // -=================== This
-            PersonThis personThis = new PersonThis("Alex", 45);*/
+            PersonThis personThis = new PersonThis("Alex", 45);
         }
     }
 }
