@@ -219,6 +219,7 @@ namespace Classes
            // ============= Практика
            // ============= Задача 1
 
+           /*
            Student[] students = new Student[14];
 
            for (int i = 0; i < 14; i++)
@@ -228,6 +229,7 @@ namespace Classes
                students[i].group = new Random().Next(2);
                students[i].diplomMark = new Random().Next(1, 11);
            }
+           */
            
            
         }
