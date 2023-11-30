@@ -9,19 +9,19 @@ namespace Classes
     {
         static void Main(string[] args)
         {
-            int[] array = { 1, 8, 14, -4, 0, 7 };
+            /*int[] array = { 1, 8, 14, -4, 0, 7 };
             
-            PrintArray();
+            PrintArray();*/
             
           //  foreach (var item in array)
           //  {
           //      Console.Write($"{item}\t");
          //   }
-            Console.WriteLine();
+            /*Console.WriteLine();
 
             Array.Reverse(array);
             PrintArray();
-            Console.WriteLine();
+            Console.WriteLine();*/
           //  {
            //     foreach (var item in array)
            //     {
@@ -32,7 +32,7 @@ namespace Classes
          //   }
 
           //  PrintArray();
-            
+           /* 
             void PrintArray()   //void - ничего не возвращает метод
             {
                 foreach (var item in array)
@@ -214,6 +214,22 @@ namespace Classes
             
             // -=================== This
             PersonThis personThis = new PersonThis("Alex", 45);
+            
+            */
+           // ============= Практика
+           // ============= Задача 1
+
+           Student[] students = new Student[14];
+
+           for (int i = 0; i < 14; i++)
+           {
+               students[i] = new Student();
+               students[i].name = "Alex" + i;
+               students[i].group = new Random().Next(2);
+               students[i].diplomMark = new Random().Next(1, 11);
+           }
+           
+           
         }
     }
 }
