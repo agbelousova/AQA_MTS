@@ -1,5 +1,4 @@
 ﻿namespace ClassesHM;
-
 public class CreditCard
 {
     public string accountNumber;
