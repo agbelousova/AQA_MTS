@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricFigures", "GeometricFigures\GeometricFigures.csproj", "{ABFAA515-2F7D-4592-B876-67ED08063FF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "Hospital\Hospital.csproj", "{529D468D-F3E7-4147-AD36-F5C75425D6C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{ABFAA515-2F7D-4592-B876-67ED08063FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABFAA515-2F7D-4592-B876-67ED08063FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABFAA515-2F7D-4592-B876-67ED08063FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529D468D-F3E7-4147-AD36-F5C75425D6C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529D468D-F3E7-4147-AD36-F5C75425D6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529D468D-F3E7-4147-AD36-F5C75425D6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529D468D-F3E7-4147-AD36-F5C75425D6C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
