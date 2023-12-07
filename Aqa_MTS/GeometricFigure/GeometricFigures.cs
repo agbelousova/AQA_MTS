@@ -1,11 +1,13 @@
-﻿namespace GeometricFigur;
+﻿namespace GeometricFigure;
 
 public class GeometricFigures
 {
-    public float LengthA { get; set; }
+   // void Area();
+
+    /*public float LengthA { get; set; }
     public float LengthB { get; set; }
     public float LengthC { get; set; }
     public float LengthD { get; set; }
     public float S;
-    void AreaGeometricFigures() {}
+    void AreaGeometricFigures() {}*/
 }

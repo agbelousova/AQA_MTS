@@ -28,13 +28,48 @@
      создавь массив квадратов, прямоугольник и треугольников и вывести их площади
 */
 
-using GeometricFigures;
+using GeometricFigure;
+
+//Triangle triangle1 = new Triangle();
+
+TriangleCreate[] triangles = new[]
+{
+ new TriangleCreate(150, 100, 100),
+ new TriangleCreate(150, 120, 100),
+ new TriangleCreate(50, 70, 100),
+ new TriangleCreate(150, 150, 150),
+};
+
+foreach (TriangleCreate triangle in triangles)
+{
+ triangle.AddTriangle(triangle);
+}
+/*
+TriangleCreate t
+
+
+TriangleCreate triangleCreates = AddTriangle();
+triangleCreates.AddTriangle(triangleCreates);
+
+ new TriangleCreate(150, 100, 100),
+ new TriangleCreate(150, 120, 100),
+ new TriangleCreate(50, 70, 100),
+ new TriangleCreate(150, 150, 150),
+};
+
+foreach (TriangleCreate triangle in triangleCreates)
+{
+ triangle.AddTriangle(triangle);
+}*/
+//triangle.AddTriangle(triangle);
+
+
 
 //TriangleCreate triangle = new TriangleCreate();
 //int i = triangle.FormTriangling(100,50,10);
 //triangle.FormTriangling();
 //Console.WriteLine($"Здравствуйте, {i}!");
-GeometricFigures[] triangle = new[] { };
+/*GeometricFigures[] triangle = new[] { };
 
 GeometricFigures[] triangle = new GeometricFigures[]
 {
@@ -51,7 +86,7 @@ Transport[] transports = new Transport[]
  new TransportVid.TransportBus(15, "Москва"),
  new TransportVid.TransportBus(55, "Новгород", 55, DateTime.Now),
  new TransportVid.TransportTrolleybus(1, "Москва", 35, new DateTime(2023, 8, 11))
-};
+};*/
 //triangle1.TriangleArea();
 /*string FormTriangling() 
 {

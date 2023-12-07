@@ -1,10 +1,71 @@
-﻿namespace GeometricFigur;
+﻿namespace GeometricFigure;
 
-//public class Triangle : GeometricFigures
-
-internal class Triangle : GeometricFigures
+public  class Triangle
 {
-    public void Area (float lengthA, float lengthB, float lengthC)
+    public float LengthA { get; set; }
+    public float LengthB { get; set; }
+    public float LengthC { get; set; }
+  //  public float LengthD { get; set; }
+    public float S;
+
+    public Triangle(float lengthA, float lengthB, float lengthC)
+    {
+        LengthA = lengthA;
+        LengthB = lengthB;
+        LengthC = lengthC;
+    }
+
+    /*protected Triangle()
+    {
+        
+    }*/
+
+    /*public Triangle(int i, int i1, int i2)
+    {
+    }*/
+
+
+
+
+    //площадь разностороннего треугольника считаем по формуле Герона
+    public void TriangleVersatile ()
+    {
+        //полупериметр треугольника
+        float pTriangle = (LengthA + LengthB + LengthC)/2;
+        S = Convert.ToSingle(
+            Math.Sqrt(pTriangle
+                      * (pTriangle - LengthA)
+                      * (pTriangle - LengthB)
+                      * (pTriangle - LengthC)));
+        Console.WriteLine($"Площадь = {S}");
+    }
+
+    //площадь равностороннего треугольника
+    public void TriangleEquilateral ()
+    {
+        float side = LengthA;
+
+        S = Convert.ToSingle((Math.Sqrt(3) * side * side)/4);
+        Console.WriteLine($"Площадь = {S}");
+    }
+
+    //площадь прямоугольного треугольникa
+    public void TriangleRightAngled ()
+    {
+        S = Convert.ToSingle(1/2*LengthA*LengthB);
+        Console.WriteLine($"Площадь = {S}");
+    }
+
+    //площадь равнобедренного треугольникa
+    public void TriangleIsosceles  ()
+    {
+        float h = Convert.ToSingle(Math.Sqrt(LengthB * LengthB - LengthA * LengthA / 4));
+        S = 1 / 2 * h * LengthB;
+        Console.WriteLine($"Площадь = {S}");
+    }
+
+/*
+public void Area (float lengthA, float lengthB, float lengthC)
     {
         //полупериметр треугольника
         float pTriangle = (LengthA + LengthB + LengthC)/2;
@@ -22,19 +83,19 @@ internal class TransportElectric : Transport
     public TransportElectric() : base() => TransportType = "Электрический транспорт";
 
     public override string GetTransportInfo() => base.PrintTransportInfo("Электрический");
-}
-   // private Triangle _triangle = new Triangle();
-   /*
-   public float S;
-   private static TriangleCreate forma = new TriangleCreate(LengthA,  LengthB,  LengthC);
-   private int t = FormTriangling(LengthA,  LengthB,  LengthC);
-   */
+}*/
+    // private Triangle _triangle = new Triangle();
+    /*
+    public float S;
+    private static TriangleCreate forma = new TriangleCreate(LengthA,  LengthB,  LengthC);
+    private int t = FormTriangling(LengthA,  LengthB,  LengthC);
+    */
 /*
 public float S;
-       
+
     public void TriangleArea(int t)
     {
-        
+
         switch (t)
         {
             case 1:
@@ -54,7 +115,7 @@ public float S;
                 break;
         }
     }
-        
+
         /*public Triangle(float lengthA, float lengthB, float lengthC)
         {
             LengthA = lengthA;
@@ -62,7 +123,7 @@ public float S;
             LengthC = lengthC;
         }#1#
 
-        //площадь разностороннего треугольника считаем по формуле Герона 
+        //площадь разностороннего треугольника считаем по формуле Герона
         public void TriangleVersatile (float lengthA, float lengthB, float lengthC)
         {
             //полупериметр треугольника
@@ -74,23 +135,23 @@ public float S;
                                   * (pTriangle - lengthC)));
             Console.WriteLine($"Площадь = {S}");
         }
-        
+
         //площадь равностороннего треугольника
         public void TriangleEquilateral (float lengthA, float lengthB, float lengthC)
         {
-            float side = lengthA; 
-         
-            S = Convert.ToSingle((Math.Sqrt(3) * side * side)/4); 
+            float side = lengthA;
+
+            S = Convert.ToSingle((Math.Sqrt(3) * side * side)/4);
             Console.WriteLine($"Площадь = {S}");
-        } 
-        
+        }
+
         //площадь прямоугольного треугольникa
         public void TriangleRightAngled (float lengthA, float lengthB, float lengthC)
         {
             S = Convert.ToSingle(1/2*lengthA*lengthB);
             Console.WriteLine($"Площадь = {S}");
-        } 
-        
+        }
+
         //площадь равнобедренного треугольникa
         public void TriangleIsosceles  (float lengthA, float lengthB, float lengthC)
         {
@@ -100,14 +161,19 @@ public float S;
         }
         */
 
-        
 
-        /*public void FormTriangling()
-        {
-          //  throw new NotImplementedException();
-        }*/
 
-        
+    /*public void FormTriangling()
+    {
+      //  throw new NotImplementedException();
+    }*/
+
+
+
+    /*public virtual void Area(object lengthA, object lengthB, object lengthC)
+    {
+        Console.WriteLine("Triangle");
+    }*/
 }
 
     /*
