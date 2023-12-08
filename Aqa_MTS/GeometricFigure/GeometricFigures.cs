@@ -1,13 +1,13 @@
 ﻿namespace GeometricFigure;
 
-public class GeometricFigures
+//класс для реализации иерархии фигур
+internal abstract class GeometricFigures
 {
-   // void Area();
+    protected string TypeGeometricFigure { get; set; } = "Не определен";
+    public abstract float Area();
 
-    /*public float LengthA { get; set; }
-    public float LengthB { get; set; }
-    public float LengthC { get; set; }
-    public float LengthD { get; set; }
-    public float S;
-    void AreaGeometricFigures() {}*/
+    public virtual void PrintInfo()
+    {
+        Console.WriteLine($"Тип геометрической фигуры: {TypeGeometricFigure}");
+    }
 }

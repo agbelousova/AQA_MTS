@@ -1,20 +1,34 @@
 ﻿namespace GeometricFigure;
 
-public class TriangleVersatile : Triangle
+//Треугольник разносторонний
+internal class TriangleVersatile : Triangle
 {
-    public TriangleVersatile(float lengthA, float lengthB, float lengthC) : base(lengthA, lengthB, lengthC)
+    public float LengthA { get; set; }
+    public float LengthB { get; set; }
+    public float LengthC { get; set; }
+
+    public TriangleVersatile(float lengthSideA, float lengthSideB, float lengthSideC)
     {
+        LengthA = lengthSideA;
+        LengthB = lengthSideB;
+        LengthC = lengthSideC;
+        TriangleType = "Разносторонний треугольник";
     }
 
-    public void Area(float LengthA, float LengthB, float LengthC)
+    public override float Area()
     {
-        //полупериметр треугольника
-        float pTriangle = (LengthA + LengthB + LengthC) / 2;
-        S = Convert.ToSingle(
-            Math.Sqrt(pTriangle
-                      * (pTriangle - LengthA)
-                      * (pTriangle - LengthB)
-                      * (pTriangle - LengthC)));
-        Console.WriteLine($"Площадь = {S}");
+        float perimeterHalf = (LengthA + LengthB + LengthC) / 2;
+
+        return Convert.ToSingle(
+            Math.Sqrt(perimeterHalf
+                      * (perimeterHalf - LengthA)
+                      * (perimeterHalf - LengthB)
+                      * (perimeterHalf - LengthC)));
+    }
+
+    public override void PrintInfo()
+    {
+        base.PrintInfo();
+        Console.WriteLine($"Стороны треугольника: {LengthA}, {LengthB}, {LengthC}\n");
     }
 }

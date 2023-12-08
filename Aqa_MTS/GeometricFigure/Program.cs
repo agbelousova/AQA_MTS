@@ -14,110 +14,23 @@
 - создавь массив квадратов, прямоугольник и треугольников и вывести их площади
 */
 
-/*
-Задание 1:
-Создать класс для подсчета площади треугольников
-     реализовать классы для равнобедренного, равностороннего, 
-прямоугольного и разностороннего треугольника
-     для каждого использовать свою формулу для подсчета площади
-     площадь разностороннего треугольника считаем по формуле герона
-Создать отдельный класс который будет отвечать за логину создания 
-треугольников. В нем вернуть нужный объект треугольника проверив его стороны
-     добавить класс квадрат и прямоугольник и логику подсчета площади для него
-     добавить класс для реализации иерархии фигур
-     создавь массив квадратов, прямоугольник и треугольников и вывести их площади
-*/
-
 using GeometricFigure;
 
-//Triangle triangle1 = new Triangle();
-
-TriangleCreate[] triangles = new[]
+GeometricFigures[] figures =
 {
- new TriangleCreate(150, 100, 100),
- new TriangleCreate(150, 120, 100),
- new TriangleCreate(50, 70, 100),
- new TriangleCreate(150, 150, 150),
+ TriangleCreate.CreateTriangle(3,4,5),
+ TriangleCreate.CreateTriangle(20,25,10),
+ TriangleCreate.CreateTriangle(5,12,13),
+ TriangleCreate.CreateTriangle(1,1,3),
+ TriangleCreate.CreateTriangle(3,3,3),
+ TriangleCreate.CreateTriangle(6,4,4),
+ TriangleCreate.CreateTriangle(15,8,15),
+ new Rectangle(4,6),
+ new Square(12),
+ new Rectangle(14,7),
+ new Square(3f)
 };
 
-foreach (TriangleCreate triangle in triangles)
-{
- triangle.AddTriangle(triangle);
-}
-/*
-TriangleCreate t
-
-
-TriangleCreate triangleCreates = AddTriangle();
-triangleCreates.AddTriangle(triangleCreates);
-
- new TriangleCreate(150, 100, 100),
- new TriangleCreate(150, 120, 100),
- new TriangleCreate(50, 70, 100),
- new TriangleCreate(150, 150, 150),
-};
-
-foreach (TriangleCreate triangle in triangleCreates)
-{
- triangle.AddTriangle(triangle);
-}*/
-//triangle.AddTriangle(triangle);
-
-
-
-//TriangleCreate triangle = new TriangleCreate();
-//int i = triangle.FormTriangling(100,50,10);
-//triangle.FormTriangling();
-//Console.WriteLine($"Здравствуйте, {i}!");
-/*GeometricFigures[] triangle = new[] { };
-
-GeometricFigures[] triangle = new GeometricFigures[]
-{
- 10,20,30
-};
-//triangle1.TriangleArea(11,15,10);
-
-
-Transport[] transports = new Transport[]
-{
- new TransportVid.TransportTrolleybus(10, "Иваново", 15, new DateTime(2023, 7, 1)),
- new TransportVid.TransportBus(15, "Москва", 20, DateTime.Now),
- new TransportVid.TransportTram(10, "Иваново", 15, new DateTime(2023, 5, 1)),
- new TransportVid.TransportBus(15, "Москва"),
- new TransportVid.TransportBus(55, "Новгород", 55, DateTime.Now),
- new TransportVid.TransportTrolleybus(1, "Москва", 35, new DateTime(2023, 8, 11))
-};*/
-//triangle1.TriangleArea();
-/*string FormTriangling() 
-{
- if (LengthA <= 0 || LengthB <= 0 || LengthC <= 0 || 
-     LengthA + LengthB <= LengthC || LengthA + LengthC <= LengthB || 
-     LengthC + LengthB <= LengthA) 
- {
-  Console.WriteLine("Треугольника с такими сторонами не существует!!!");
-  return "нет";
- }
- if (LengthA == LengthB && LengthA == LengthC && LengthB == LengthC) 
- {
-  Console.WriteLine("Треугольник равносторонний!");
-  return "равносторонний";
- }
- if (((LengthA * LengthA) == (LengthB * LengthB) + (LengthC * LengthC)) ||
-     ((LengthB * LengthB) == ((LengthA * LengthA) + (LengthC * LengthC)) || 
-      ((LengthC * LengthC) == (LengthB * LengthB) + (LengthA * LengthA)))) 
- {
-  Console.WriteLine("Треугольник прямоугольный!");
-  return "прямоугольный";
- }
- if ((LengthA == LengthB && LengthA != LengthC) || 
-     (LengthB == LengthC && LengthB != LengthA) || 
-     (LengthA == LengthC && LengthA != LengthB)) 
- {
-  Console.WriteLine("Треугольник равнобедренный!");
-  return "равнобедренный";
- }
- Console.WriteLine("Треугольник разносторонний!");
- return "разносторонний";
-}*/
-
+foreach (var figure in figures)
+ figure.PrintInfo();
 
