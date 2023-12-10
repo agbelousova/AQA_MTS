@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{3A2354EC-430C-4D8A-855A-F472497879DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions_HM", "Exceptions_HM\Exceptions_HM.csproj", "{3734DC66-79BB-4891-A6F7-B4F0E2E3C5DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A2354EC-430C-4D8A-855A-F472497879DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A2354EC-430C-4D8A-855A-F472497879DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A2354EC-430C-4D8A-855A-F472497879DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A2354EC-430C-4D8A-855A-F472497879DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3734DC66-79BB-4891-A6F7-B4F0E2E3C5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3734DC66-79BB-4891-A6F7-B4F0E2E3C5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3734DC66-79BB-4891-A6F7-B4F0E2E3C5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3734DC66-79BB-4891-A6F7-B4F0E2E3C5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
