@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricFigures", "GeometricFigures\GeometricFigures.csproj", "{35ACE77D-77D4-4FF1-BF27-1BD0EA30D0F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products", "Products\Products.csproj", "{E7CF6BB2-1E6D-40B1-8EE9-154851528915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{35ACE77D-77D4-4FF1-BF27-1BD0EA30D0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35ACE77D-77D4-4FF1-BF27-1BD0EA30D0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35ACE77D-77D4-4FF1-BF27-1BD0EA30D0F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7CF6BB2-1E6D-40B1-8EE9-154851528915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7CF6BB2-1E6D-40B1-8EE9-154851528915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7CF6BB2-1E6D-40B1-8EE9-154851528915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7CF6BB2-1E6D-40B1-8EE9-154851528915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
