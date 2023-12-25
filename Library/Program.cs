@@ -85,7 +85,7 @@ while (!exitFlag)
                 foreach (Books book in libraryBook)
                 {
                     Console.WriteLine(
-                        $"№: {i}. Название: {book.BookName}, Автор: {book.BookAuthor}, Год публикации: {book.BookYearPublication}");
+                        $"{i}. Название: {book.BookName}, Автор: {book.BookAuthor}, Год публикации: {book.BookYearPublication}");
                     i++;
                 }
 
