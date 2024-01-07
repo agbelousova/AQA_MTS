@@ -1,0 +1,14 @@
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\bin\Debug\net7.0\Arrays.exe
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\bin\Debug\net7.0\Arrays.deps.json
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\bin\Debug\net7.0\Arrays.runtimeconfig.json
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\bin\Debug\net7.0\Arrays.dll
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\bin\Debug\net7.0\Arrays.pdb
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.AssemblyInfoInputs.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.AssemblyInfo.cs
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.csproj.CoreCompileInputs.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.dll
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\refint\Arrays.dll
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.pdb
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\Arrays.genruntimeconfig.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\Arrays\obj\Debug\net7.0\ref\Arrays.dll

@@ -1,0 +1,14 @@
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.AssemblyInfoInputs.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.AssemblyInfo.cs
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.csproj.CoreCompileInputs.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.dll
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\refint\TypesAndOperators.dll
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.pdb
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\bin\Debug\net7.0\TypesAndOperators.exe
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\bin\Debug\net7.0\TypesAndOperators.deps.json
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\bin\Debug\net7.0\TypesAndOperators.runtimeconfig.json
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\bin\Debug\net7.0\TypesAndOperators.dll
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\bin\Debug\net7.0\TypesAndOperators.pdb
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\TypesAndOperators.genruntimeconfig.cache
+C:\Users\Павел\RiderProjects\AQA_MTS\Aqa_MTS\TypesAndOperators\obj\Debug\net7.0\ref\TypesAndOperators.dll
