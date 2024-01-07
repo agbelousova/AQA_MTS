@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics_HM", "Generics_HM\Generics_HM.csproj", "{0A89E11C-7A1B-4975-8220-BFA18876766C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Сoordinates", "Сoordinates\Сoordinates.csproj", "{0A89E11C-7A1B-4975-8220-BFA18876766C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
