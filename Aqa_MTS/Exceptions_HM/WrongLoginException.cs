@@ -3,7 +3,8 @@
 public class WrongLoginException : Exception
 {
     public string Value { get; }
-    public WrongLoginException(string value, string message) 
+
+    public WrongLoginException(string value, string message)
         : base($"Неверный ввод в поле {message}")
     {
         Value = value;
@@ -11,7 +12,5 @@ public class WrongLoginException : Exception
 
     public WrongLoginException()
     {
-        
     }
-    
 }

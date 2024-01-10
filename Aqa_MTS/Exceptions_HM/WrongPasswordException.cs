@@ -9,8 +9,6 @@ public class WrongPasswordException : Exception
     {
         Value = value;
     }
-
-
     public WrongPasswordException()
     {
     }

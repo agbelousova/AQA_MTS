@@ -20,8 +20,5 @@
 
 using Exceptions_HM;
 
-ExceptionAuthhorization exceptionAuthhorization = new ExceptionAuthhorization();
-bool proverka = exceptionAuthhorization.ExceptionAuthhoriz();
-Console.WriteLine($"Результат выполнения {proverka}");
-
-
+Authorization authorization = new Authorization();
+authorization.Run();
