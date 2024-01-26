@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_HM", "LINQ_HM\LINQ_HM.csproj", "{02FC000B-5515-41FC-890C-B2B8BE23CE90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{16D425FB-0F13-4000-8DA1-C6B4D9F03818}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02FC000B-5515-41FC-890C-B2B8BE23CE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02FC000B-5515-41FC-890C-B2B8BE23CE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02FC000B-5515-41FC-890C-B2B8BE23CE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02FC000B-5515-41FC-890C-B2B8BE23CE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D425FB-0F13-4000-8DA1-C6B4D9F03818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D425FB-0F13-4000-8DA1-C6B4D9F03818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D425FB-0F13-4000-8DA1-C6B4D9F03818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D425FB-0F13-4000-8DA1-C6B4D9F03818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
