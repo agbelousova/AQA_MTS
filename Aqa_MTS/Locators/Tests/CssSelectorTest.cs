@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using SeleniumBasic.Helpers.Configuration;
 
 namespace SeleniumBasic.Tests;
 
@@ -6,7 +7,7 @@ public class CssSelectorTest : BaseTest
 {
     [Test]
     public void CssSelectorsTest() {
-        Driver.Navigate().GoToUrl("file:/Users/aleksandr.trostyanko/Documents/Work/TeachMeSkills/Code/CSharp/AQA_MTS/Locators/Resources/index.html");
+        Driver.Navigate().GoToUrl("file:/Users/Павел/RiderProjects/AQA_MTS/Aqa_MTS/Locators/Resources/index.html");
 
         // Поиск по id
         Assert.That(Driver.FindElement(By.CssSelector("#my-Address")).Displayed);
