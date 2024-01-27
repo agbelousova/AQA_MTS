@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumBasic", "SeleniumBasic\SeleniumBasic.csproj", "{2B6C8035-E6C5-413F-B234-F7061D4631FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locators", "Locators\Locators.csproj", "{2B6C8035-E6C5-413F-B234-F7061D4631FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
