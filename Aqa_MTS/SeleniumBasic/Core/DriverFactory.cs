@@ -4,7 +4,6 @@ using OpenQA.Selenium.Firefox;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using LogLevel = OpenQA.Selenium.LogLevel;
-
 namespace NUnitTest.Core;
 
 public class DriverFactory
