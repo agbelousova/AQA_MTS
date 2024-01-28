@@ -1,5 +1,7 @@
 ﻿using NUnitTest.Core;
 using OpenQA.Selenium;
+using SeleniumBasic.Core;
+
 
 namespace SeleniumBasic.Tests;
 
