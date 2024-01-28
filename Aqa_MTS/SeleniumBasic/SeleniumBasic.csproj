@@ -24,14 +24,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Utilites\" />
+      <Folder Include="Helpers\" />
+      <Folder Include="Resources\" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Resources\chromedriver.exe" />
-      <Content Include="Resources\chromedriver.exe">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
       <None Remove="appsettings.json" />
       <Content Include="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
