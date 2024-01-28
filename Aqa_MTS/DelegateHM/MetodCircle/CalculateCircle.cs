@@ -18,6 +18,6 @@ public class CalculateCircle
     public double VolumeBall(double r)
     {
         //V = 4/3 · π · R3
-        return 4 / 3 * Math.PI * Math.Pow(r, 3);
+        return 4.0 / 3.0 * Math.PI * Math.Pow(r, 3);
     }
 }
