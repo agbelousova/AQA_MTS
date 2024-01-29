@@ -4,7 +4,6 @@ public static class Calc
 {
     public static int Sum(int x, int y) => x + y;
 
-    public static int DivInt(int x, int y) => x / y;
-
-    public static double DivDouble(double x, double y) => Math.Round(x / y, 2);
+    public static double Div(double x, double y) => x / y;
+    public static int Div(int x, int y) => x / y;
 }
