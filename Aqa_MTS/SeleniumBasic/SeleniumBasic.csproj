@@ -25,10 +25,10 @@
 
     <ItemGroup>
       <Folder Include="Helpers\" />
-      <Folder Include="Resources\" />
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="Resources\chromedriver.exe" />
       <None Remove="Resources\chromedriver.exe" />
       <None Remove="appsettings.json" />
       <Content Include="appsettings.json">

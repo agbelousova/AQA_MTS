@@ -1,18 +1,22 @@
+using NUnitTest.Core;
 using OpenQA.Selenium;
 using SeleniumBasic.Core;
+using SeleniumBasic.Helpers.Configuration;
 
 namespace SeleniumBasic.Tests;
 
-//[Parallelizable(scope: ParallelScope.All)]
-//[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[Parallelizable(scope: ParallelScope.All)]
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 public class BaseTest
 {
-    protected IWebDriver Driver { get; private set; }
-
+    protected IWebDriver Driver { get; set; }
+    
     [SetUp]
     public void Setup()
     {
-        Driver = new Browser().Driver;
+        Driver = new SimpleDriver().Driver;
+        //Driver = new Browser().Driver!;
+       // Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
 
     [TearDown]
