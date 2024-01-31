@@ -35,6 +35,7 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <None Remove="Resources\index.html" />
+      <Content Include="Resources\chromedriver.exe" />
       <Content Include="Resources\index.html">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
