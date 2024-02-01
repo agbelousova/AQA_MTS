@@ -27,7 +27,7 @@ public class WaitsTest : BaseTest
         WaitsHelper waitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(7));
         Driver.Navigate().GoToUrl("http://the-internet.herokuapp.com/dynamic_loading/1");
         
-        IWebElement button = waitsHelper.WaitForVisibilityLocatedBy(By.TagName("button"));
+        IWebElement button = waitsHelper.FluentWaitForElement(By.TagName("button"));
         button.Click();
         Assert.IsTrue(waitsHelper.WaitForElementInvisible(button));
 
