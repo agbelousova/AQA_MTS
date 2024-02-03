@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumAdvanced", "SeleniumAdvanced\SeleniumAdvanced.csproj", "{B38CC339-6C02-43E0-B2DE-3EED3A9AEE04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSimple", "PageObjectSimple\PageObjectSimple.csproj", "{EEBC369A-1088-43B4-8099-4930DE3A1629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B38CC339-6C02-43E0-B2DE-3EED3A9AEE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B38CC339-6C02-43E0-B2DE-3EED3A9AEE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B38CC339-6C02-43E0-B2DE-3EED3A9AEE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B38CC339-6C02-43E0-B2DE-3EED3A9AEE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBC369A-1088-43B4-8099-4930DE3A1629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBC369A-1088-43B4-8099-4930DE3A1629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBC369A-1088-43B4-8099-4930DE3A1629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBC369A-1088-43B4-8099-4930DE3A1629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

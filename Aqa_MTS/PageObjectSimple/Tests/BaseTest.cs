@@ -1,10 +1,9 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using SeleniumAdvanced.Core;
-using SeleniumAdvanced.Helpers;
-using SeleniumAdvanced.Helpers.Configuration;
+﻿using OpenQA.Selenium;
+using PageObjectSimple.Core;
+using PageObjectSimple.Helpers;
+using PageObjectSimple.Helpers.Configuration;
 
-namespace SeleniumAdvanced.Tests;
+namespace PageObjectSimple.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

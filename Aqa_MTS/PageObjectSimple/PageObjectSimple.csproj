@@ -24,23 +24,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Update="Resources\index.html">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Content Update="Resource\download.jpeg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Update="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <None Remove="appsettings.json" />
-      <Content Include="appsettings.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <Compile Remove="GlobalUsings.cs" />
-      <Content Include="GlobalUsings.cs">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <None Remove="Resources\download.jpeg" />
-      <Content Include="Resources\download.jpeg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
 

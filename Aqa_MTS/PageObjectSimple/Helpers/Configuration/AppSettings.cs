@@ -1,4 +1,4 @@
-namespace SeleniumAdvanced.Helpers.Configuration;
+namespace PageObjectSimple.Helpers.Configuration;
 
 public class AppSettings
 {
