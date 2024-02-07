@@ -36,7 +36,7 @@ public class LaminateTest : BaseTest
         Thread.Sleep(2000);
         Driver.FindElement(By.Id("btn_calculate")).Click();
         Thread.Sleep(2000);
-        
+        /*
         string result = Driver.FindElement(By.CssSelector(".calc-result")).Text;
 
         if (result.Contains("плашек ламината: 647") &&
@@ -44,8 +44,8 @@ public class LaminateTest : BaseTest
             result.Contains("0 руб") &&
             result.Contains("0 кг"))
             Assert.Pass();
-        
-      //  Assert.That(Driver.FindElement(By.CssSelector(".calc-result")).Text, 
-      //  Is.EqualTo("Требуемое количество плашек ламината: 9\r\nКоличество упаковок ламината: 1\r\nСтоимость ламината: 0 руб\r\nВес ламината: 0 кг"));
+        */
+        Assert.That(Driver.FindElement(By.CssSelector(".calc-result")).Text.Replace("\r\n"," "), 
+        Is.EqualTo("Требуемое количество плашек ламината: 647 Количество упаковок ламината: 7 Стоимость ламината: 0 руб Вес ламината: 0 кг"));
     }
 }

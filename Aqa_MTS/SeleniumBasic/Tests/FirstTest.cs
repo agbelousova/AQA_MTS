@@ -29,7 +29,7 @@ public class FirstTest : BaseTest
         Driver.Navigate().GoToUrl("https://bymed.top/calc/%D1%81%D0%BA%D1%84-2148");
         Thread.Sleep(3000);
         Driver.SwitchTo().Frame(0);
-        IWebElement age = Driver.FindElement(By.Name("age"));
+        IWebElement age = Driver.FindElement(By.Id("age"));
         IWebElement selectWebElement1 = Driver.FindElement(By.Id("sex"));
         IWebElement creatinin = Driver.FindElement(By.Name("cr"));
         IWebElement selectWebElement2 = Driver.FindElement(By.Id("cr-size"));
@@ -52,21 +52,20 @@ public class FirstTest : BaseTest
         button.Click();
         Thread.Sleep(2000);
         IWebElement result1 = Driver.FindElement(By.Id("mdrd_res"));
-        Assert.That(result1.Text, Is.EqualTo("0.07"));
-        
         IWebElement result2 = Driver.FindElement(By.TagName("i"));
-        Assert.That(result2.Text, Is.EqualTo("мл/мин/1.73м2"));
-        
         IWebElement result3 = Driver.FindElement(By.ClassName("diagnosis"));
-        Assert.That(result3.Text, Is.EqualTo("Терминальная почечная недостаточность (C5)"));
-        
         IWebElement result4 = Driver.FindElement(By.Id("ckd_epi_res"));
-        Assert.That(result4.Text, Is.EqualTo("0.06"));
-        
         IWebElement result5 = Driver.FindElement(By.XPath("//*[@id=\"ckd_epi\"]/p/i"));
-        Assert.That(result5.Text, Is.EqualTo("мл/мин/1.73м2"));
-        
         IWebElement result6 = Driver.FindElement(By.XPath("//*[@id=\"ckd_epi\"]/p/span"));
-        Assert.That(result6.Text, Is.EqualTo("Терминальная почечная недостаточность (C5)"));
+        
+        Assert.Multiple(() =>
+        {
+            Assert.That(result1.Text, Is.EqualTo("0.07"));
+            Assert.That(result2.Text, Is.EqualTo("мл/мин/1.73м2"));
+            Assert.That(result3.Text, Is.EqualTo("Терминальная почечная недостаточность (C5)"));
+            Assert.That(result4.Text, Is.EqualTo("0.06"));
+            Assert.That(result5.Text, Is.EqualTo("мл/мин/1.73м2"));
+            Assert.That(result6.Text, Is.EqualTo("Терминальная почечная недостаточность (C5)"));
+        });
     }
 }
