@@ -5,7 +5,7 @@ namespace PageObjectSimple.Tests;
 
 public class ProjectsTest : BaseTest
 {
-    /*
+    
     [Test]
     public void CreateProjectTest()
     {
@@ -14,5 +14,5 @@ public class ProjectsTest : BaseTest
         
         ProjectSteps.NavigateToAddProjectPage();
     }
-    */
+    
 }

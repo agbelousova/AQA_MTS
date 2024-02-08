@@ -1,3 +1,4 @@
+using PageObjectSimple.Helpers.Configuration;
 using OpenQA.Selenium;
 using PageObjectSimple.Helpers.Configuration;
 

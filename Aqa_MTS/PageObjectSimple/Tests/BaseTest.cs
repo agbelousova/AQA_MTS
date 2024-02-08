@@ -1,7 +1,8 @@
-﻿using OpenQA.Selenium;
-using PageObjectSimple.Core;
+﻿using PageObjectSimple.Core;
 using PageObjectSimple.Helpers;
 using PageObjectSimple.Helpers.Configuration;
+using PageObjectSimple.Steps;
+using OpenQA.Selenium;
 
 namespace PageObjectSimple.Tests;
 
@@ -9,15 +10,21 @@ namespace PageObjectSimple.Tests;
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 public class BaseTest
 {
-    protected IWebDriver Driver { get; set; }
+    protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
-    
+
+    protected NavigationSteps NavigationSteps;
+    protected ProjectSteps ProjectSteps;
+
     [SetUp]
     public void Setup()
     {
-        Driver = new Browser().Driver!;
-       // Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
+        Driver = new Browser().Driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
+        
+        // Инициализация Steps
+        NavigationSteps = new NavigationSteps(Driver);
+        ProjectSteps = new ProjectSteps(Driver);
     }
 
     [TearDown]
