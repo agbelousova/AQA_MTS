@@ -5,7 +5,7 @@ namespace PageObjectHM.Core
 {
     public class Browser
     {
-        public IWebDriver Driver { get; }
+        public IWebDriver? Driver { get; }
 
         public Browser()
         {
@@ -18,7 +18,7 @@ namespace PageObjectHM.Core
 
             Driver.Manage().Window.Maximize();
             Driver.Manage().Cookies.DeleteAllCookies();
-            //Driver!.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
+         //   Driver!.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
         }
     }
 }

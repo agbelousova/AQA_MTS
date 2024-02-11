@@ -6,29 +6,30 @@ namespace PageObjectHM.Pages;
 
 public abstract class BasePage
 {
-    protected IWebDriver Driver;
+    protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
+    
+    public BasePage(IWebDriver driver)
+    {
+        Driver = driver;
+        WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
+    }
 
     public BasePage(IWebDriver driver, bool openPageByUrl)
     {
         Driver = driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
-        
+
         if (openPageByUrl)
         {
-            OpenPageByUrl();
+            OpenPageByURL();
         }
     }
     
-    public BasePage(IWebDriver driver) : this(driver, false)
-    {
-    }
-    
-
-    public abstract bool IsPageOpened();
     protected abstract string GetEndpoint();
-
-    private void OpenPageByUrl()
+    public abstract bool IsPageOpened();
+    
+    protected void OpenPageByURL()
     {
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL + GetEndpoint());
     }

@@ -5,7 +5,12 @@ namespace PageObjectHM.Steps;
 
 public class NavigationSteps : BaseStep
 {
-    public NavigationSteps(IWebDriver driver) : base(driver) { }
+    private LoginPage _loginPage;
+
+    public NavigationSteps(IWebDriver driver) : base(driver)
+    {
+        _loginPage = new LoginPage(Driver);
+    }
     
     public LoginPage NavigateToLoginPage()
     {
@@ -18,24 +23,25 @@ public class NavigationSteps : BaseStep
         return new DashboardPage(Driver, true);
     }
     
-   /* 
-    public DashboardPage SuccessfulLogin(string username, string psw)
-    {
-        Login(username, psw);
-        return DashboardPage;
+   public DashboardPage SuccessfulLogin(string username, string psw)
+   {
+       _loginPage.IncorrectLogin(username, psw);
+      //  Login(username, psw);
+        return new DashboardPage(Driver);
     }
 
     public LoginPage IncorrectLogin(string username, string psw)
     {
         Login(username, psw);
-        return LoginPage;
-    }*/
-/*
+        Thread.Sleep(2000);
+        return _loginPage;
+    }
+
     private void Login(string username, string psw)
     {
-        Pages.LoginPage.LoginInput().SendKeys(username);
-        LoginPage.PswInput().SendKeys(psw);
-        LoginPage.LoginInButton().Click();
+        _loginPage.LoginInput.SendKeys(username);
+        _loginPage.PswInput.SendKeys(psw);
+        _loginPage.LoginInButton.Click();
     }
-*/
+
 }
