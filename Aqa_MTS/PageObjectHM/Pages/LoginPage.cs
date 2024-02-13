@@ -16,7 +16,7 @@ namespace PageObjectHM.Pages
         public LoginPage(IWebDriver driver) : base(driver)
         {
             //почему-то не переходит на странцу, если не указать тут ссылку..(
-            Driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+            //Driver.Navigate().GoToUrl("https://www.saucedemo.com/");
         }
         // Инициализация класса
        // public LoginPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)

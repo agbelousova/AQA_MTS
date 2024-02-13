@@ -25,6 +25,8 @@ public class BaseTest
         // Инициализация Steps
         NavigationSteps = new NavigationSteps(Driver);
         ProjectSteps = new ProjectSteps(Driver);
+        
+        Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
 
     [TearDown]
