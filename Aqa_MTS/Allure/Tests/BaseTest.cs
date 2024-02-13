@@ -37,6 +37,8 @@ public class BaseTest
         NavigationSteps = new NavigationSteps(Driver);
         ProjectSteps = new ProjectSteps(Driver);
         AllureSteps = new AllureSteps(Driver);
+        
+        Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
     
     [TearDown]
