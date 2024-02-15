@@ -1,4 +1,4 @@
-namespace Allure.Helpers.Configuration;
+namespace Wrappers.Helpers.Configuration;
 
 public class AppSettings
 {

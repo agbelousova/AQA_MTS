@@ -1,6 +1,6 @@
-using Allure.Helpers.Configuration;
+using Wrappers.Helpers.Configuration;
 
-namespace Allure.Tests;
+namespace Wrappers.Tests;
 
 public class ProjectsTest : BaseTest
 {

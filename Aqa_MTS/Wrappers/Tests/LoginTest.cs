@@ -1,8 +1,8 @@
-using Allure.Helpers.Configuration;
 using Allure.Net.Commons;
 using NUnit.Allure.Attributes;
+using Wrappers.Helpers.Configuration;
 
-namespace Allure.Tests;
+namespace Wrappers.Tests;
 
 [TestFixture(Author = "Alex", Description = "Login Tests")]
 public class LoginTest : BaseTest

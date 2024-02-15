@@ -1,13 +1,15 @@
-using Allure.Pages;
 using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using Wrappers.Pages;
 
-namespace Allure.Steps;
+namespace Wrappers.Steps;
 
 public class NavigationSteps : BaseStep
 {
-    public NavigationSteps(IWebDriver driver) : base(driver) { }
-    
+    public NavigationSteps(IWebDriver driver) : base(driver)
+    {
+    }
+
     public LoginPage NavigateToLoginPage()
     {
         return new LoginPage(Driver, true);
@@ -17,7 +19,7 @@ public class NavigationSteps : BaseStep
     {
         return new DashboardPage(Driver, true);
     }
-    
+
     [AllureStep]
     public DashboardPage SuccessfulLogin(string username, string psw)
     {
@@ -33,9 +35,8 @@ public class NavigationSteps : BaseStep
 
     private void Login(string username, string psw)
     {
-        LoginPage.EmailInput().SendKeys(username);
-        LoginPage.PswInput().SendKeys(psw);
-        LoginPage.LoginInButton().Click();
+        LoginPage.EmailInput.SendKeys(username);
+        LoginPage.PswInput.SendKeys(psw);
+        LoginPage.LoginInButton.Click();
     }
-
 }

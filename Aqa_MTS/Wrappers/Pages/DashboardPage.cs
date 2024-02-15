@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace Allure.Pages
+namespace Wrappers.Pages
 {
     public class DashboardPage : BasePage
     {

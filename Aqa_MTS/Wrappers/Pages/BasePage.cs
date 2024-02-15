@@ -1,8 +1,8 @@
-using Allure.Helpers;
-using Allure.Helpers.Configuration;
 using OpenQA.Selenium;
+using Wrappers.Helpers;
+using Wrappers.Helpers.Configuration;
 
-namespace Allure.Pages;
+namespace Wrappers.Pages;
 
 public abstract class BasePage
 {

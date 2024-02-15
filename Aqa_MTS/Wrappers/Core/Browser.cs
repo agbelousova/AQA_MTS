@@ -1,7 +1,7 @@
-﻿using Allure.Helpers.Configuration;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using Wrappers.Helpers.Configuration;
 
-namespace Allure.Core
+namespace Wrappers.Core
 {
     public class Browser
     {

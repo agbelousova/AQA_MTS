@@ -1,13 +1,13 @@
 using System.Text;
-using Allure.Core;
-using Allure.Helpers;
-using Allure.Helpers.Configuration;
 using Allure.Net.Commons;
-using Allure.Steps;
 using NUnit.Allure.Core;
 using OpenQA.Selenium;
+using Wrappers.Core;
+using Wrappers.Helpers;
+using Wrappers.Helpers.Configuration;
+using Wrappers.Steps;
 
-namespace Allure.Tests;
+namespace Wrappers.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
@@ -19,7 +19,6 @@ public class BaseTest
 
     protected NavigationSteps NavigationSteps;
     protected ProjectSteps ProjectSteps;
-    protected AllureSteps AllureSteps;
 
     [OneTimeSetUp]
     public static void GlobalSetup()
@@ -36,9 +35,6 @@ public class BaseTest
         // Инициализация Steps
         NavigationSteps = new NavigationSteps(Driver);
         ProjectSteps = new ProjectSteps(Driver);
-        AllureSteps = new AllureSteps(Driver);
-        
-        Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
     
     [TearDown]
@@ -53,7 +49,7 @@ public class BaseTest
                 Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
                 byte[] screenshotBytes = screenshot.AsByteArray;
 
-                // Прикрепление скриншота к отчету Allure
+                // Прикрепление скриншота к отчету Wrappers
                 // Вариант 1
                 AllureLifecycle.Instance.AddAttachment("Screenshot", "image/png", screenshotBytes);
             

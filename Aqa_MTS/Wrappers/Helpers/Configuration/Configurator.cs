@@ -1,7 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 
-namespace Allure.Helpers.Configuration
+namespace Wrappers.Helpers.Configuration
 {
     public static class Configurator
     {
