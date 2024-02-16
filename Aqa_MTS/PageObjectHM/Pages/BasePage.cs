@@ -2,6 +2,7 @@ using OpenQA.Selenium;
 using PageObjectHM.Helpers;
 using PageObjectHM.Helpers.Configuration;
 
+
 namespace PageObjectHM.Pages;
 
 public abstract class BasePage

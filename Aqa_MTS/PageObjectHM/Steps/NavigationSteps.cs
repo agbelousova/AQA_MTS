@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using PageObjectHM.Helpers.Configuration;
 using PageObjectHM.Pages;
 
 namespace PageObjectHM.Steps;
@@ -15,19 +16,37 @@ public class NavigationSteps : BaseStep
     public LoginPage NavigateToLoginPage()
     {
         return new LoginPage(Driver);
-        //return new LoginPage(Driver, true);
-    }
-
-    public DashboardPage NavigateToDashboardPage()
-    {
-        return new DashboardPage(Driver, true);
     }
     
-   public DashboardPage SuccessfulLogin(string username, string psw)
+    public CatalogPage NavigateToCatalogPage()
+    {
+        return new CatalogPage(Driver);
+    }
+    
+    public CartPage NavigateToCartPage()
+    {
+        return new CartPage(Driver);
+    }
+
+    public CheckoutStepOnePage NavigateToCheckoutStepOnePage()
+    {
+        return new CheckoutStepOnePage(Driver);
+    }
+    
+    public CheckoutStepTwoPage NavigateToCheckoutStepTwoPage()
+    {
+        return new CheckoutStepTwoPage(Driver);
+    }
+    
+    public CheckoutCompletePage NavigateToCheckoutCompletePage()
+    {
+        return new CheckoutCompletePage(Driver);
+    }
+    
+   public CatalogPage SuccessfulLogin(string username, string psw)
    {
        _loginPage.IncorrectLogin(username, psw);
-      //  Login(username, psw);
-        return new DashboardPage(Driver);
+        return new CatalogPage(Driver);
     }
 
     public LoginPage IncorrectLogin(string username, string psw)
@@ -44,4 +63,13 @@ public class NavigationSteps : BaseStep
         _loginPage.LoginInButton.Click();
     }
 
+    public bool PaymentProduct()
+    {
+        Login(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        NavigateToCatalogPage().AddProduct().ShoppingCartBadge.Click();
+        NavigateToCartPage().CheckoutProduct();
+        NavigateToCheckoutStepOnePage().ContinueProduct();
+        NavigateToCheckoutStepTwoPage().CheckoutComplete();
+        return NavigateToCheckoutCompletePage().BackToProductsButton.Displayed;
+    }
 }

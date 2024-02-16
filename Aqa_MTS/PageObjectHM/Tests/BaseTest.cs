@@ -14,7 +14,6 @@ public class BaseTest
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected NavigationSteps NavigationSteps;
-    protected ProjectSteps ProjectSteps;
 
     [SetUp]
     public void Setup()
@@ -24,7 +23,6 @@ public class BaseTest
         
         // Инициализация Steps
         NavigationSteps = new NavigationSteps(Driver);
-        ProjectSteps = new ProjectSteps(Driver);
         
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

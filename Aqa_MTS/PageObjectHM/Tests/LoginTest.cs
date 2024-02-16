@@ -7,13 +7,17 @@ namespace PageObjectHM.Tests;
 public class LoginTest : BaseTest
 {
     [Test]
+    [Category("PositiveLoginTest")]
+    [Category("Steps")]
     public void SuccessLoginStepTest()
     {
         NavigationSteps.NavigateToLoginPage();
         NavigationSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        Assert.That(NavigationSteps.DashboardPage.IsPageOpened());
+        Assert.That(NavigationSteps.CatalogPage.IsPageOpened());
     }
     [Test]
+    [Category("NegativeIncorrectLoginTest")]
+    [Category("Steps")]
     public void IncorrectLoginStepTest()
     {
         Assert.That(
@@ -24,6 +28,8 @@ public class LoginTest : BaseTest
     }
 
     [Test]
+    [Category("Steps")]
+    [Category("NegativeLockedUserLoginTest")]
     public void LockedUserLoginStepTest()
     {
         Assert.That(
@@ -34,15 +40,19 @@ public class LoginTest : BaseTest
     }
     
     [Test]
+    [Category("PositiveLoginTest")]
+    [Category("Page")]
     public void SuccessLoginPageTest()
     {
         LoginPage loginPage = new LoginPage(Driver);
         loginPage.SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        DashboardPage dashboardPage = new DashboardPage(Driver);
-        Assert.That(dashboardPage.IsPageOpened);
+        CatalogPage catalogPage = new CatalogPage(Driver);
+        Assert.That(catalogPage.IsPageOpened);
     }
 
     [Test]
+    [Category("NegativeIncorrectLoginTest")]
+    [Category("Page")]
     public void IncorrectLoginPageTest()
     {
         Assert.That(
@@ -53,6 +63,8 @@ public class LoginTest : BaseTest
     }
     
     [Test]
+    [Category("NegativeLockedUserLoginTest")]
+    [Category("Page")]
     public void LockedUserLoginPageTest()
     {
         Assert.That(
@@ -60,14 +72,5 @@ public class LoginTest : BaseTest
                 .IncorrectLogin("locked_out_user", "secret_sauce")
                 .ErrorLabel.Text.Trim(),
             Is.EqualTo("Epic sadface: Sorry, this user has been locked out."));
-    }
-
-    [Test]
-    public void AddProductPageTest()
-    {
-        Assert.That(
-            new DashboardPage(Driver)
-                .AddProduct().Basket.Text.Trim(),
-            Is.EqualTo("1"));
     }
 }
