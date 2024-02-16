@@ -51,7 +51,7 @@ public class SeleniumWebDriverTest : BaseTest
        IWebElement removeButton = Driver.FindElement(By.XPath("//button[. = 'Remove']"));
        IWebElement checkboxElement = Driver.FindElement(By.Id("checkbox"));
        removeButton.Click();
-       IWebElement messageRemoveElement = WaitsHelper.FluentWaitForElement(By.XPath("//form[@id='checkbox-example']/p"));
+       IWebElement messageRemoveElement = WaitsHelper.WaitForVisibilityLocatedBy(By.Id("message"));
        
        Assert.Multiple(() =>
        {
@@ -59,7 +59,7 @@ public class SeleniumWebDriverTest : BaseTest
            Assert.That(WaitsHelper.WaitForElementInvisible(checkboxElement));
        });
        
-       IWebElement elementInput = Driver.FindElement(By.XPath("//form[@id='input-example']/input"));
+       IWebElement elementInput = Driver.FindElement(By.CssSelector("input[type='text']"));
        Assert.That(!elementInput.Enabled);
        IWebElement inputButton = Driver.FindElement(By.XPath("//form[@id='input-example']/button"));
        inputButton.Click();
@@ -88,8 +88,7 @@ public class SeleniumWebDriverTest : BaseTest
        fileUploadPath.SendKeys(filePath);
 
        WaitsHelper.WaitForExists(By.Id("file-submit")).Submit();
-       Thread.Sleep(2000);//чтоб успеть увидеть результат
-       Assert.That(WaitsHelper.WaitForExists(By.Id("uploaded-files")).Text, Is.EqualTo("download.jpeg"));
+       Assert.That(WaitsHelper.WaitForVisibilityLocatedBy(By.Id("uploaded-files")).Text, Is.EqualTo("download.jpeg"));
    }
    /*
     Задание 4: Добавить тест для страницы Frames
