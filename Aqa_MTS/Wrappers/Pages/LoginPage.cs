@@ -13,7 +13,8 @@ namespace Wrappers.Pages
         private static readonly By PswInputBy = By.Id("password");
         private static readonly By RememberMeCheckboxBy = By.Id("rememberme");
         private static readonly By LoginInButtonBy = By.Id("button_primary");
-
+        private static readonly By ErrorLabelBy = By.CssSelector("[data-testid='loginErrorText']");
+        
         // Инициализация класса
         public LoginPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
@@ -41,9 +42,18 @@ namespace Wrappers.Pages
         }
 
         // Методы
-        public Input EmailInput => new Input(Driver, EmailInputBy);
-        public Input PswInput => new(Driver, PswInputBy);
-        public UIElement RememberMeCheckbox => new UIElement(Driver, RememberMeCheckboxBy);
+        // Методы поиска элементов
+        public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
+        public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);
+        public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
+        public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
+        // public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
         public Button LoginInButton => new Button(Driver, LoginInButtonBy);
+        
+        // Методы действий с элементами
+        public void ClickLoginInButton() => LoginInButton.Click();
+        
+        // Методы получения свойств
+        public string GetErrorLabelText() => ErrorLabel.Text.Trim();
     }
 }

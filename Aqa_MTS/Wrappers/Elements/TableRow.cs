@@ -1,21 +1,31 @@
 using OpenQA.Selenium;
-using Wrappers.Elements;
 
-namespace Wrappers.Elements
+namespace Wrappers.Elements;
+
+public class TableRow
 {
-    public class TableRow
+    private UIElement _uiElement;
+    private List<TableCell> _cells;
+    
+    public TableRow(UIElement uiElement)
     {
-        private UIElement _uiElement;
-        
-        public TableRow(IWebDriver? driver, By @by)
-        {
-            _uiElement = new UIElement(driver, @by);
-        }
+        _uiElement = uiElement;
+        _cells = new List<TableCell>();
 
-        public TableRow(IWebDriver? driver, IWebElement webElement)
+        foreach (var cellElement in _uiElement.FindUIElements(By.TagName("td")))
         {
-            _uiElement = new UIElement(driver, webElement);
+            _cells.Add(new TableCell(cellElement)); 
         }
-
     }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="columnName"></param>
+    /// <returns></returns>
+    public TableCell GetCell(int columnIndex)
+    {
+        return _cells[columnIndex];
+    }
+
 }

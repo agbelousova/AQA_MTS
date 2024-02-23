@@ -1,10 +1,12 @@
 using OpenQA.Selenium;
+using Wrappers.Elements;
 
 namespace Wrappers.Pages.ProjectPages;
 
 public class ProjectBasePage : BasePage
 {
     private static readonly By NameInputBy = By.Id("name");
+    private static readonly By ProjectTypeRadioButtonBy = By.Name("suite_mode");
     
     public ProjectBasePage(IWebDriver driver) : base(driver)
     {
@@ -23,4 +25,7 @@ public class ProjectBasePage : BasePage
     {
         throw new NotImplementedException();
     }
+    
+    // Атомарные Методы
+    public RadioButton ProjectTypeRadioButton => new RadioButton(Driver, ProjectTypeRadioButtonBy);
 }

@@ -19,6 +19,7 @@ public class BaseTest
 
     protected NavigationSteps NavigationSteps;
     protected ProjectSteps ProjectSteps;
+    protected UserSteps UserSteps;
 
     [OneTimeSetUp]
     public static void GlobalSetup()
