@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
-using PageObjectHM.Helpers;
-using PageObjectHM.Helpers.Configuration;
+using AllureHM.Helpers;
+using AllureHM.Helpers.Configuration;
 
-namespace PageObjectHM.Pages
+namespace AllureHM.Pages
 {
     public class CatalogPage : BasePage
     {

@@ -1,13 +1,15 @@
-﻿using PageObjectHM.Helpers.Configuration;
-using PageObjectHM.Pages;
-using PageObjectHM.Steps;
+﻿using Allure.Net.Commons;
+using AllureHM.Helpers.Configuration;
+using AllureHM.Pages;
+using AllureHM.Steps;
+using NUnit.Allure.Attributes;
 
-namespace PageObjectHM.Tests;
+namespace AllureHM.Tests;
 
 public class PaymentTest:BaseTest
 {
-    [Test]
-    [Category("PaymentTest")]
+    [Test(Description = "Покупка товара. Товар успешно оплачен")]
+    [AllureSeverity(SeverityLevel.normal)]
     [Category("Page")]
     public void PaymentPageTest()
     {
@@ -24,8 +26,8 @@ public class PaymentTest:BaseTest
         Assert.That(checkoutCompletePage.BackToProductsButton.Displayed);
     }
 
-    [Test]
-    [Category("PaymentTest")]
+    [Test(Description = "Покупка товара. Товар успешно оплачен")]
+    [AllureSeverity(SeverityLevel.normal)]
     [Category("Steps")]
     public void PaymentStepsTest()
     {

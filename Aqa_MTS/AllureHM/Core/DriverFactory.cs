@@ -4,7 +4,7 @@ using OpenQA.Selenium.Firefox;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace PageObjectHM.Core;
+namespace AllureHM.Core;
 
 public class DriverFactory
 {

@@ -1,8 +1,9 @@
 using OpenQA.Selenium;
-using PageObjectHM.Pages;
+using AllureHM.Pages;
+using NUnit.Allure.Core;
 
-namespace PageObjectHM.Steps;
-
+namespace AllureHM.Steps;
+[AllureNUnit]
 public class BaseStep
 {
     protected IWebDriver Driver;

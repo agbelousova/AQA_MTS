@@ -1,8 +1,8 @@
-﻿using PageObjectHM.Pages;
-using PageObjectHM.Helpers.Configuration;
-using PageObjectHM.Steps;
+﻿using AllureHM.Pages;
+using AllureHM.Helpers.Configuration;
+using AllureHM.Steps;
 
-namespace PageObjectHM.Tests;
+namespace AllureHM.Tests;
 
 public class AddTest:BaseTest
 {

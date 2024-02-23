@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace PageObjectHM.Pages
+namespace AllureHM.Pages
 {
     public class LoginPage : BasePage
     {

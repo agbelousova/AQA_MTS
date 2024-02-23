@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using PageObjectHM.Helpers;
+using AllureHM.Helpers;
 
-namespace PageObjectHM.Pages;
+namespace AllureHM.Pages;
 
 public class CartPage : BasePage
 {
