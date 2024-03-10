@@ -6,7 +6,7 @@ namespace ValueOfObjects.Steps;
 
 public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
 {
-    public ProjectsPage AddProject(Project project)
+    public ProjectsPage1 AddProject(Project project)
     {
         AddProjectPage = new AddProjectPage(Driver, true);
         
@@ -17,6 +17,6 @@ public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
         
         AddProjectPage.AddButton.Click();
         
-        return new ProjectsPage(Driver);
+        return new ProjectsPage1(Driver);
     }
 }
