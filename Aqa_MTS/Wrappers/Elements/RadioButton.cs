@@ -27,7 +27,7 @@ public class RadioButton
         {
             UIElement uiElement = new UIElement(webDriver, webElement);
             _uiElements.Add(uiElement);
-            _values.Add(uiElement.GetAttribute("value"));
+            _values.Add(uiElement.GetAttribute("name"));
             _texts.Add(uiElement.FindUIElement(By.XPath("parent::*/strong")).Text.Trim());
         }
     }

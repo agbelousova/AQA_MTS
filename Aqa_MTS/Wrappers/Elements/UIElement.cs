@@ -136,8 +136,7 @@ public class UIElement : IWebElement
     public string Text
     {
         get
-        {
-            /*
+        {/*
             if (_webElement.Text != null || _webElement.Text.Equals(""))
             {
                 if (GetAttribute("value").Equals(""))
@@ -148,7 +147,6 @@ public class UIElement : IWebElement
                 return GetAttribute("value");
             }
             */
-
             return _webElement.Text;
         }
     }
