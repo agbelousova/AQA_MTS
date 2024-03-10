@@ -1,7 +1,7 @@
-using PageObjectSteps.Helpers.Configuration;
-using PageObjectSteps.Pages;
+using ChainOfInvocations.Helpers.Configuration;
+using ChainOfInvocations.Pages;
 
-namespace PageObjectSteps.Tests;
+namespace ChainOfInvocations.Tests;
 
 public class LoginTest : BaseTest
 {

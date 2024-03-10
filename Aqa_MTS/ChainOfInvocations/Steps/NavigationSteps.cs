@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using PageObjectSteps.Pages;
+using ChainOfInvocations.Pages;
 
-namespace PageObjectSteps.Steps;
+namespace ChainOfInvocations.Steps;
 
 public class NavigationSteps(IWebDriver driver) : BaseSteps(driver)
 {

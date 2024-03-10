@@ -33,9 +33,7 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
         <None Remove="appsettings.json" />
-        <Content Include="appsettings.json">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
+        <Content Include="appsettings.json" />
     </ItemGroup>
 
 </Project>

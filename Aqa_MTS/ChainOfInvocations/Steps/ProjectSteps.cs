@@ -1,38 +1,22 @@
 using OpenQA.Selenium;
-using PageObjectSteps.Pages;
-using PageObjectSteps.Pages.ProjectPages;
+using ChainOfInvocations.Pages;
+using ChainOfInvocations.Steps;
 
-namespace PageObjectSteps.Steps;
+namespace ChainOfInvocations.Steps;
 
-public class ProjectsSteps : BaseSteps
+public class ProjectsSteps(IWebDriver driver) : BaseSteps(driver)
 {
-    public ProjectsSteps(IWebDriver driver) : base(driver)
+    public ProjectsPage AddProject(string projectName, string announcement, bool checkAnnouncement, int suiteMode, bool checkCaseStatuses)
     {
-        AddProjectPage addProjectPage = new AddProjectPage(Driver);
         DashboardPage dashboardPage = new DashboardPage(Driver);
-    }
 
-    public void AddProductToCart(List<string> Products)
-    {
-    }
-    
-    public void CreateProject()
-    {
-        
-    }
-
-    public void UpdateProject()
-    {
-        
-    }
-
-    public void ReadProject()
-    {
-        
-    }
-
-    public void DeleteProject()
-    {
-        
+        return dashboardPage
+            .ClickSidebarProjectsAddButton()
+            .InputNameValue(projectName)
+            .InputAnnouncementValue(announcement)
+            .CheckShowAnnouncementCheckbox(checkAnnouncement)
+            .ChooseProjectType(suiteMode)
+            .CheckCaseApprovalsCheckbox(checkCaseStatuses)
+            .ClickAddButton();
     }
 }
