@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfObjects", "ValueOfOb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeSingleton", "NativeSingleton\NativeSingleton.csproj", "{1C536EC7-B3DF-4579-BAE5-A3745A3C976E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadableComponent", "LoadableComponent\LoadableComponent.csproj", "{DA2E8032-5B0D-4042-8F00-EC5D1F379172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{1C536EC7-B3DF-4579-BAE5-A3745A3C976E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C536EC7-B3DF-4579-BAE5-A3745A3C976E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C536EC7-B3DF-4579-BAE5-A3745A3C976E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2E8032-5B0D-4042-8F00-EC5D1F379172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2E8032-5B0D-4042-8F00-EC5D1F379172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2E8032-5B0D-4042-8F00-EC5D1F379172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2E8032-5B0D-4042-8F00-EC5D1F379172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
