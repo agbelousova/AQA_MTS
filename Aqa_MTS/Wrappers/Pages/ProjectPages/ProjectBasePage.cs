@@ -7,6 +7,7 @@ public class ProjectBasePage : BasePage
 {
     private static readonly By NameInputBy = By.Id("name");
     private static readonly By ProjectTypeRadioButtonBy = By.Name("suite_mode");
+    private static readonly By ProjectTypeCheckboxBy = By.CssSelector("[type = 'checkbox']");
     
     public ProjectBasePage(IWebDriver driver) : base(driver)
     {
@@ -28,4 +29,5 @@ public class ProjectBasePage : BasePage
     
     // Атомарные Методы
     public RadioButton ProjectTypeRadioButton => new RadioButton(Driver, ProjectTypeRadioButtonBy);
+    public Checkbox ProjectTypeCheckbox => new Checkbox(Driver, ProjectTypeCheckboxBy);
 }

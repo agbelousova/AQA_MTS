@@ -17,8 +17,6 @@ public class BaseTest
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
 
-    protected NavigationSteps NavigationSteps;
-    protected ProjectSteps ProjectSteps;
     protected UserSteps UserSteps;
 
     [OneTimeSetUp]
@@ -26,53 +24,38 @@ public class BaseTest
     {
         AllureLifecycle.Instance.CleanupResultDirectory();
     }
-
+    
     [SetUp]
-    public void Setup()
+    public void FactoryDriverTest()
     {
         Driver = new Browser().Driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
+
+        UserSteps = new UserSteps(Driver);
         
-        // Инициализация Steps
-        NavigationSteps = new NavigationSteps(Driver);
-        ProjectSteps = new ProjectSteps(Driver);
+        Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
-    
+
     [TearDown]
     public void TearDown()
     {
-        // Проверка, был ли тест сброшен
-        try
+        if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
         {
-            if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
-            {
-                // Создание скриншота
-                Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
-                byte[] screenshotBytes = screenshot.AsByteArray;
+            Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
+            byte[] screenshotBytes = screenshot.AsByteArray;
 
-                // Прикрепление скриншота к отчету Wrappers
-                // Вариант 1
-                AllureLifecycle.Instance.AddAttachment("Screenshot", "image/png", screenshotBytes);
-            
-                // Вариант 2
-                AllureApi.AddAttachment(
-                    "data.txt",
-                    "text/plain",
-                    Encoding.UTF8.GetBytes("This is the file content.")
-                );
-                AllureApi.AddAttachment(
-                    "Screenshot",
-                    "image/png",
-                    screenshotBytes
-                );
-            }
+            //IWebElement test = Driver.FindElement(By.Id("sss"));
+            //Screenshot screenshotElement = ((ITakesScreenshot)test).GetScreenshot();
+
+            // Прикрепление скриншота к отчету
+            // Вариант 1
+            AllureLifecycle.Instance.AddAttachment("Screenshot", "image/png", screenshotBytes);
+
+            // Вариант 2
+            // AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
+            // AllureApi.AddAttachment("data.txt", "text/plain", Encoding.UTF8.GetBytes("This os the file content."));
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-        
+
         Driver.Quit();
     }
 }

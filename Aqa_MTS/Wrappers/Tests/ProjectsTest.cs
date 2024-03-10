@@ -17,10 +17,24 @@ public class ProjectsTest : BaseTest
 
         AddProjectPage addProjectPage = new AddProjectPage(Driver);
         addProjectPage.ProjectTypeRadioButton.SelectByIndex(1);
-        addProjectPage.ProjectTypeRadioButton.SelectByValue("3");
+        addProjectPage.ProjectTypeRadioButton.SelectByValue("2");
         addProjectPage.ProjectTypeRadioButton.SelectByText("Use a single repository for all cases (recommended)");
     }
 
+    [Test]
+    public void AddProjectTest()
+    {
+        UserSteps
+            .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
+            .AddProjectButton.Click();
+
+        AddProjectPage addProjectPage = new AddProjectPage(Driver);
+        addProjectPage.ProjectTypeRadioButton.SelectByIndex(1);
+       // addProjectPage.ProjectTypeRadioButton.SelectByValue("2");
+        addProjectPage.ProjectTypeRadioButton.SelectByText("Use a single repository for all cases (recommended)");
+       // addProjectPage.ProjectTypeCheckbox.SelectByText("Show the announcement on the overview page");
+    }
+    
     [Test]
     public void TmpTest()
     {
