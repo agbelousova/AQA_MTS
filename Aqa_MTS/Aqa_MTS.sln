@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSimple", "PageObjectSimple\PageObjectSimple.csproj", "{EEBC369A-1088-43B4-8099-4930DE3A1629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSteps", "PageObjectSteps\PageObjectSteps.csproj", "{48231856-FDCD-432F-B5BD-063C47F23068}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfObjects", "ValueOfObject\ValueOfObjects.csproj", "{48231856-FDCD-432F-B5BD-063C47F23068}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
