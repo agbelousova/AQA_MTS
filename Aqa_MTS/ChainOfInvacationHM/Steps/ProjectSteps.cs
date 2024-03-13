@@ -5,7 +5,7 @@ namespace ChainOfInvocationHM.Steps;
 
 public class ProjectsSteps(IWebDriver driver) : BaseSteps(driver)
 {
-    public ProjectsPage AddProject(string projectName, string announcement, bool checkAnnouncement, int suiteMode, bool checkCaseStatuses)
+    public ProjectsPage AddProjects(string projectName, string announcement, bool checkAnnouncement, int suiteMode, bool checkCaseStatuses)
     {
         DashboardPage dashboardPage = new DashboardPage(Driver);
 
