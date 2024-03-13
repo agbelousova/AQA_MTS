@@ -1,12 +1,14 @@
-using OpenQA.Selenium;
-using ValueOfObjects.Models;
-using ValueOfObjects.Pages.ProjectPages;
+﻿using OpenQA.Selenium;
+using ValueOfObjectsHM.Models;
+using ValueOfObjectsHM.Pages;
+using ValueOfObjectsHM.Pages.ProjectPages;
+using ValueOfObjectsHM.Tests;
 
-namespace ValueOfObjects.Steps;
+namespace ValueOfObjectsHM.Steps;
 
-public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
+public class ProjectStep(IWebDriver driver) : BaseStep(driver)
 {
-    public ProjectsPage1 AddProject(Project project)
+    public ProjectsPage AddProject(Project project)
     {
         AddProjectPage = new AddProjectPage(Driver, true);
         
@@ -17,6 +19,6 @@ public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
         
         AddProjectPage.AddButton.Click();
         
-        return new ProjectsPage1(Driver);
+        return new ProjectsPage(Driver);
     }
 }
