@@ -1,4 +1,5 @@
 ﻿using ValueOfObjectsHM.Models;
+using ValueOfObjectsHM.Pages;
 
 namespace ValueOfObjectsHM.Tests;
 
@@ -17,8 +18,8 @@ public class AddProjectTest : BaseTest
             IsShowAnnouncement = false,
             ProjectType = 1
         };
-        
-        Assert.That(_projectSteps.AddProject(expectedProject).SuccessMessage.Text.Trim(),
-            Is.EqualTo("Successfully added the new project."));
+
+        ProjectsPage _projectsPage = _projectSteps.AddProject(expectedProject);
+        Assert.That(_projectsPage.ProjectsTable.GetCell("Project", expectedProject.ProjectName, 0).GetLink().Enabled);
     }
 }
