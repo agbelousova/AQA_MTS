@@ -5,6 +5,10 @@
         
     Scenario: Простой тест c Given
         Given открыт браузер
+    
+    Scenario: Test
+        Given открыт браузер
+        * страница логина открыта
 
     Scenario: Простой тест c Given и When
         Given открыт браузер
