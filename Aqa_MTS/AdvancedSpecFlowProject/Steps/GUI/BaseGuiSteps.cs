@@ -1,4 +1,4 @@
-﻿using CoreProject1.Core;
+﻿using CoreProjects.Core;
 using OpenQA.Selenium;
 
 namespace AdvancedSpecFlowProject.Steps;
