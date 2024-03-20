@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTestProject", "SpecFlowTestProject\SpecFlowTestProject.csproj", "{6B8069F6-9F1F-4FCE-95D6-90F80A418C52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaucedemoCore", "SaucedemoCore\SaucedemoCore.csproj", "{4478736A-B1E4-4C78-BCBF-D64748013DBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedSpecFlowProject", "AdvancedSpecFlowProject\AdvancedSpecFlowProject.csproj", "{1196E924-E3D5-461A-9EBF-C8379E2E426C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaucedemoBDD", "SaucedemoBDD\SaucedemoBDD.csproj", "{DE1DE0B2-7A98-460C-9503-4E37C58E7A92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreProjects", "CoreProjects\CoreProjects.csproj", "{3CCB5668-2358-482C-8498-DDB38A6D10B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowSaucedemo", "SpecFlowSaucedemo\SpecFlowSaucedemo.csproj", "{4587FE5F-EABC-4902-80BC-8FF63A6B8F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,18 +23,18 @@ Global
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E2B330-CA81-4513-AC3E-B6172FE70D5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B8069F6-9F1F-4FCE-95D6-90F80A418C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B8069F6-9F1F-4FCE-95D6-90F80A418C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B8069F6-9F1F-4FCE-95D6-90F80A418C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B8069F6-9F1F-4FCE-95D6-90F80A418C52}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1196E924-E3D5-461A-9EBF-C8379E2E426C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1196E924-E3D5-461A-9EBF-C8379E2E426C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1196E924-E3D5-461A-9EBF-C8379E2E426C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1196E924-E3D5-461A-9EBF-C8379E2E426C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3CCB5668-2358-482C-8498-DDB38A6D10B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CCB5668-2358-482C-8498-DDB38A6D10B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CCB5668-2358-482C-8498-DDB38A6D10B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CCB5668-2358-482C-8498-DDB38A6D10B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4478736A-B1E4-4C78-BCBF-D64748013DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4478736A-B1E4-4C78-BCBF-D64748013DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4478736A-B1E4-4C78-BCBF-D64748013DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4478736A-B1E4-4C78-BCBF-D64748013DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1DE0B2-7A98-460C-9503-4E37C58E7A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1DE0B2-7A98-460C-9503-4E37C58E7A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1DE0B2-7A98-460C-9503-4E37C58E7A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1DE0B2-7A98-460C-9503-4E37C58E7A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4587FE5F-EABC-4902-80BC-8FF63A6B8F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4587FE5F-EABC-4902-80BC-8FF63A6B8F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4587FE5F-EABC-4902-80BC-8FF63A6B8F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4587FE5F-EABC-4902-80BC-8FF63A6B8F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
