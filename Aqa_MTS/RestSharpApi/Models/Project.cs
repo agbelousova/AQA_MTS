@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace ValueOfObjects.Models;
+namespace RestSharpApi.Models;
 
 public class Project
 {
@@ -9,10 +9,7 @@ public class Project
     [JsonPropertyName("announcement")] public String Announcement { get; set; }
     [JsonPropertyName("show_announcement")] public bool IsShowAnnouncement { get; set; }
     [JsonPropertyName("suite_mode")] public int SuiteMode { get; set; }
-    public int ProjectType { get; set; }
-    public bool IsTestCaseApprovals { get; set; }
-    public string NewField { get; set; }
-    
+
     public override string ToString()
     {
         return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Announcement)}: {Announcement}, " +

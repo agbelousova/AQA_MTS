@@ -10,7 +10,7 @@ public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
     {
         AddProjectPage = new AddProjectPage(Driver, true);
         
-        AddProjectPage.NameInput.SendKeys(project.ProjectName);
+        AddProjectPage.NameInput.SendKeys(project.Name);
         AddProjectPage.AnnouncementTextArea.SendKeys(project.Announcement);
         AddProjectPage.TypeRadioButton.SelectByIndex(project.ProjectType);
         if (project.IsShowAnnouncement != null) AddProjectPage.ShowAnnouncementCheckBox.Click();
