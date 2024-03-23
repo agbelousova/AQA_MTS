@@ -1,5 +1,5 @@
-﻿using CoreProjects.Core;
-using CoreProjects.Pages;
+﻿using CoreProject.Core;
+using CoreProject.Pages;
 using NUnit.Framework;
 
 namespace AdvancedSpecFlowProject.Steps;

@@ -1,5 +1,5 @@
-﻿using CoreProjects.Core;
-using CoreProjects.Steps;
+﻿using CoreProject.Core;
+using CoreProject.Steps;
 
 namespace AdvancedSpecFlowProject.Steps;
 
