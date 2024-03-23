@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using OpenQA.Selenium;
 using ValueOfObjects.Helpers;
 using ValueOfObjects.Helpers.Configuration;
