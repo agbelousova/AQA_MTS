@@ -47,4 +47,16 @@ public class ShoppingCartStepDefs : BaseSteps
             Assert.That(_shoppingCartSteps.IsOrderCompleted);
         });
     }
+
+    [When(@"The user deleted the product")]
+    public void DeletedProduct()
+    {
+        _shoppingCartSteps.RemoveItemFromCart();
+    }
+
+    [Then(@"The product has been successfully deleted")]
+    public void IsProductSuccessfullyDeleted()
+    {
+        Assert.That(_productsPage.IsRemovedFromCart());
+    }
 }
