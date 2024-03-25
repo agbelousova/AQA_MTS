@@ -33,6 +33,13 @@ public class UserSteps : BaseSteps
         return _loginPage;
     }
 
+    public void Login(string username, string password)
+    {
+        _loginPage.UsernameInput.SendKeys(username);
+        _loginPage.PswInput.SendKeys(password);
+        _loginPage.LoginInButton.Click();
+    }
+
     public void FillUserData(string firstname, string lastname, string postalCode)
     {
         _userData.FirstnameInput.SendKeys(firstname);
