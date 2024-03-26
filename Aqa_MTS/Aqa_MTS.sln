@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfObjects", "ValueOfOb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpApi", "RestSharpApi\RestSharpApi.csproj", "{DB3F9C4A-4B0D-461F-AC00-08995D250CCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRailComplexApi", "TestRailComplexApi\TestRailComplexApi.csproj", "{5C00C375-ABD1-4B7A-A712-11857001ACCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{DB3F9C4A-4B0D-461F-AC00-08995D250CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB3F9C4A-4B0D-461F-AC00-08995D250CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB3F9C4A-4B0D-461F-AC00-08995D250CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C00C375-ABD1-4B7A-A712-11857001ACCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C00C375-ABD1-4B7A-A712-11857001ACCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C00C375-ABD1-4B7A-A712-11857001ACCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C00C375-ABD1-4B7A-A712-11857001ACCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
