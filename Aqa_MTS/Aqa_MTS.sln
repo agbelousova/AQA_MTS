@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SausedemoCore", "SausedemoC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaucedemoBDD", "SaucedemoBDD\SaucedemoBDD.csproj", "{CD60BCDA-F490-46C0-8173-84605DDA4E3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRailCore", "TestRailCore\TestRailCore.csproj", "{6749D9AF-B990-4F3D-913F-F4A4348AF3EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRailBDD", "TestRailBDD\TestRailBDD.csproj", "{9E83F605-15D7-41DF-B3D8-68E31B6C792C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{CD60BCDA-F490-46C0-8173-84605DDA4E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD60BCDA-F490-46C0-8173-84605DDA4E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD60BCDA-F490-46C0-8173-84605DDA4E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6749D9AF-B990-4F3D-913F-F4A4348AF3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6749D9AF-B990-4F3D-913F-F4A4348AF3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6749D9AF-B990-4F3D-913F-F4A4348AF3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6749D9AF-B990-4F3D-913F-F4A4348AF3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E83F605-15D7-41DF-B3D8-68E31B6C792C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E83F605-15D7-41DF-B3D8-68E31B6C792C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E83F605-15D7-41DF-B3D8-68E31B6C792C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E83F605-15D7-41DF-B3D8-68E31B6C792C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <TargetFrameworks>net8.0</TargetFrameworks>
         <LangVersion>12</LangVersion>
     </PropertyGroup>
 
@@ -25,13 +25,17 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="appsettings.json" />
       <Content Include="appsettings.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SausedemoCore\SausedemoCore.csproj" />
+      <ProjectReference Include="..\TestRailCore\TestRailCore.csproj" />
     </ItemGroup>
 
 </Project>
