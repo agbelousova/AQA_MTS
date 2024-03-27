@@ -16,6 +16,7 @@ public class UserStepDefs : BaseSteps
     private ProjectSteps _projectSteps;
     private ProjectsPage _projectsPage;
     private ProjectMilestonesPage _projectMilestonesPage;
+    private ProjectTestCasePage _projectTestCase;
     
     public UserStepDefs(Browser browser, ScenarioContext scenarioContext) : base(browser, scenarioContext)
     {
@@ -23,6 +24,7 @@ public class UserStepDefs : BaseSteps
         _projectSteps = new ProjectSteps(Driver);
         _projectsPage = new ProjectsPage(Driver);
         _projectMilestonesPage = new ProjectMilestonesPage(Driver);
+        _projectTestCase = new ProjectTestCasePage(Driver);
     }
     [Given(@"The admin user is logged in")]
     public void AdminUserLoggedIn()
@@ -46,6 +48,7 @@ public class UserStepDefs : BaseSteps
     }
 
     [Given(@"The user opened the created project and went to the advanced tab Milestone")]
+    [Given(@"The user opened the created project and went to the advanced tab TestCase")]
     public void UserOpenedCreatedProjectAndAdvancedMilestone()
     {
         TableCell tableCell = _projectsPage.ProjectsTable
@@ -71,5 +74,28 @@ public class UserStepDefs : BaseSteps
     public void MilestoneSuccessfullyCreated()
     {
         Assert.That(_projectMilestonesPage.SuccessMessage.Text.Trim(), Is.EqualTo("Successfully added the new milestone."));
+    }
+
+    [When(@"The user created TestCase")]
+    public void UserCreatedTestCase()
+    {
+        TestCase testCase = new TestCase()
+        {
+            InputTitle = "Test Case",
+            TemplateDropDown = 2,
+            TypeDropDown = 3,
+            PriorityDropDown = 1,
+            AssignedToDropDown = 1,
+            StepsInput = "StepsInput"
+        };
+
+        _projectSteps.AddTestCase(testCase);
+    }
+
+    [Then(@"TestCase successfully created")]
+    public void ThenTestCaseSuccessfullyCreated()
+    {
+        Assert.That(_projectTestCase.SuccessMessage.Text.Trim(), 
+            Is.EqualTo("Successfully added the new test case. Add another"));
     }
 }

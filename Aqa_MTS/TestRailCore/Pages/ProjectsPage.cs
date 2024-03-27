@@ -12,6 +12,7 @@ public class ProjectsPage : BasePage
     private static readonly By AddProjectButtonBy = By.XPath("//*[contains(text(), 'Add Project')]");
     private static readonly By ProjectsTableBy = By.CssSelector("table.grid");
     private static readonly By _addMilestoneButtonBy = By.Id("sidebar-milestones-add");
+    private static readonly By _addTestSuiteButtonBy = By.Id("navigation-empty-addsuite");
     
     public ProjectsPage(IWebDriver driver) : base(driver) { }
     public ProjectsPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl) { }
@@ -24,9 +25,16 @@ public class ProjectsPage : BasePage
     public Table ProjectsTable => new(Driver, ProjectsTableBy);
 
     public Button AddMilestoneButton => new(Driver, _addMilestoneButtonBy);
+    public Button AddTestSuiteButton => new(Driver, _addTestSuiteButtonBy);
     public AddMilestonePage ClickAddMilestoneButton()
     {
         AddMilestoneButton.Click();
         return new AddMilestonePage(Driver);
+    }
+    
+    public AddTestSuitePage ClickAddTestSuiteButton()
+    {
+        AddTestSuiteButton.Click();
+        return new AddTestSuitePage(Driver);
     }
 }
