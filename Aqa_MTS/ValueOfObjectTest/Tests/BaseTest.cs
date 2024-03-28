@@ -1,0 +1,58 @@
+using NUnit.Framework;
+using OpenQA.Selenium;
+using ValueOfObjectTest.Core;
+using ValueOfObjectTest.Helpers;
+using ValueOfObjectTest.Helpers.Configuration;
+using ValueOfObjectTest.Models;
+using ValueOfObjectTest.Steps;
+
+namespace ValueOfObjectTest.Tests;
+
+[Parallelizable(scope: ParallelScope.All)]
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+public class BaseTest
+{
+    protected IWebDriver Driver { get; private set; }
+
+    protected NavigationSteps _navigationSteps;
+    protected ProjectSteps _projectSteps;
+
+    protected User Admin { get; private set; }
+    protected Project project;
+
+    [OneTimeSetUp]
+    public void OneTimeSetup()
+    {
+        if (Configurator.Language.ToLower().Equals("en"))
+        {
+            project = JsonHelper.ProjectFromJson(@"Resources/project_en.json");            
+        }
+        else
+        {
+            project = JsonHelper.ProjectFromJson(@"Resources/project_rus.json");            
+        }
+    }
+    
+    [SetUp]
+    public void Setup()
+    {
+        Driver = new Browser().Driver;
+
+        _navigationSteps = new NavigationSteps(Driver);
+        _projectSteps = new ProjectSteps(Driver);
+
+        Admin = new User
+        {
+            Email = Configurator.AppSettings.Username,
+            Password = Configurator.AppSettings.Password
+        };
+        
+        Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
+    }
+
+    [TearDown]
+    public void TearDown()
+    {
+        Driver.Quit();
+    }
+}
