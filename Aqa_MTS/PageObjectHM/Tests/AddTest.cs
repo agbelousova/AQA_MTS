@@ -4,7 +4,7 @@ using PageObjectHM.Steps;
 
 namespace PageObjectHM.Tests;
 
-public class AddTest:BaseTest
+public class AddTest : BaseTest
 {
     [Test]
     [Category("AddTest")]
@@ -12,7 +12,8 @@ public class AddTest:BaseTest
     public void AddPageTest()
     {
         LoginPage loginPage = new LoginPage(Driver);
-        CatalogPage catalogPage = loginPage.SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        CatalogPage catalogPage =
+            loginPage.SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
 
         catalogPage.AddProduct();
 
@@ -21,7 +22,6 @@ public class AddTest:BaseTest
             Assert.That(catalogPage.ShoppingCartBadge.Text, Is.EqualTo("1"));
             Assert.That(catalogPage.RemoveProductButton.Displayed);
         });
-
     }
 
     [Test]

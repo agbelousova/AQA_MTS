@@ -14,16 +14,18 @@ public class BaseTest
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected NavigationSteps NavigationSteps;
+    protected ProductSteps ProductSteps;
 
     [SetUp]
     public void Setup()
     {
         Driver = new Browser().Driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
-        
+
         // Инициализация Steps
         NavigationSteps = new NavigationSteps(Driver);
-        
+        ProductSteps = new ProductSteps(Driver);
+
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
 

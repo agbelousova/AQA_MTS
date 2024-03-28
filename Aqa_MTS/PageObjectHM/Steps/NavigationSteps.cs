@@ -62,14 +62,4 @@ public class NavigationSteps : BaseStep
         _loginPage.PswInput.SendKeys(psw);
         _loginPage.LoginInButton.Click();
     }
-
-    public bool PaymentProduct()
-    {
-        Login(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        NavigateToCatalogPage().AddProduct().ShoppingCartBadge.Click();
-        NavigateToCartPage().CheckoutProduct();
-        NavigateToCheckoutStepOnePage().ContinueProduct();
-        NavigateToCheckoutStepTwoPage().CheckoutComplete();
-        return NavigateToCheckoutCompletePage().BackToProductsButton.Displayed;
-    }
 }

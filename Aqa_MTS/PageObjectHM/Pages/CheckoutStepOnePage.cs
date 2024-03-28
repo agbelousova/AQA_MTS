@@ -40,11 +40,11 @@ public class CheckoutStepOnePage: BasePage
     public IWebElement LastNameInput => WaitsHelper.WaitForExists(LastNameInputBy);
     public IWebElement PostalCodeInput => WaitsHelper.WaitForExists(PostalCodeInputBy);
     
-    public CheckoutStepTwoPage ContinueProduct()
+    public CheckoutStepTwoPage ContinueProduct(string firstname, string lastname, string postalcode)
     { 
-        FirstNameInput.SendKeys("Nastya");
-        LastNameInput.SendKeys("Svist");
-        PostalCodeInput.SendKeys("12345");
+        FirstNameInput.SendKeys(firstname);
+        LastNameInput.SendKeys(lastname);
+        PostalCodeInput.SendKeys(postalcode);
         ContinueButton.Click();
         return new CheckoutStepTwoPage(Driver);
     }

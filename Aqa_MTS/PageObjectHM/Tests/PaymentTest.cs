@@ -18,7 +18,7 @@ public class PaymentTest:BaseTest
         catalogPage.ShoppingCartBadge.Click();
         CartPage cartPage = new CartPage(Driver);
         CheckoutStepOnePage checkoutStepOnePage = cartPage.CheckoutProduct();
-        CheckoutStepTwoPage checkoutStepTwoPage = checkoutStepOnePage.ContinueProduct();
+        CheckoutStepTwoPage checkoutStepTwoPage = checkoutStepOnePage.ContinueProduct("Nastya","Svist", "256102");
         CheckoutCompletePage checkoutCompletePage = checkoutStepTwoPage.CheckoutComplete();
 
         Assert.That(checkoutCompletePage.BackToProductsButton.Displayed);
@@ -29,6 +29,6 @@ public class PaymentTest:BaseTest
     [Category("Steps")]
     public void PaymentStepsTest()
     {
-        Assert.That(NavigationSteps.PaymentProduct());
+        Assert.That(ProductSteps.PaymentProduct());
     }
 }
