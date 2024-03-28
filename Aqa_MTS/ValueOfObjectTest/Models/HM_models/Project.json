@@ -1,0 +1,22 @@
+﻿{
+  "id": 1,
+  "announcement": "Welcome to project X",
+  "completed_on": 1389968184,
+  "default_role_id": 3,
+  "default_role": "Tester",
+  "is_completed": false,
+  "name": "Project X",
+  "show_announcement": true,
+  "suite_mode": 1,
+  "url": "https://instance.testrail.io/index.php?/projects/overview/1",
+  "users": [
+    {
+      "id": 3,
+      "global_role_id": null,
+      "global_role": null,
+      "project_role_id": null,
+      "project_role": null
+    }
+  ],
+  "groups": []
+}

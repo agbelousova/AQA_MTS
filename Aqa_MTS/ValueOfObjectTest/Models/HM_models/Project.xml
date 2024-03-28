@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <id>1</id>
+    <announcement>Welcome to project X</announcement>
+    <completed_on>1389968184</completed_on>
+    <default_role_id>3</default_role_id>
+    <default_role>Tester</default_role>
+    <is_completed>false</is_completed>
+    <name>Project X</name>
+    <show_announcement>true</show_announcement>
+    <suite_mode>1</suite_mode>
+    <url>https://instance.testrail.io/index.php?/projects/overview/1</url>
+    <users>
+        <id>3</id>
+        <global_role_id/>
+        <global_role/>
+        <project_role_id/>
+        <project_role/>
+    </users>
+    <groups/>
+</root>

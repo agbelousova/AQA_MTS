@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "ba20624e-135d-4ad8-8f12-bc6ba33b5d06",
+		"name": "TestRail API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33933453"
+	},
+	"item": [
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "get_project",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/get_project/{{project_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_project/{{project_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_completed\": true,\r\n    \"limit\": 2,\r\n    \"offset\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/get_projects",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_projects",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project X\",\r\n    \"announcement\": \"Welcome to project X\",\r\n    \"show_announcement\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/add_project",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_project",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"announcement\": \"Happy Holidays Everyone!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/update_project/{{project_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_project/{{project_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/delete_project/{{project_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_project/{{project_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "milestone",
+			"item": [
+				{
+					"name": "get_milestone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/get_milestone/{{milestone_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_milestone/{{milestone_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_milestones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/get_milestones/{{project_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_milestones/{{project_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_milestone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Release 2.0\",\r\n    \"due_on\": 1394596385\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/add_milestone/{{project_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_milestone/{{project_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_milestone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_completed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/update_milestone/{{milestone_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_milestone/{{milestone_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_milestone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}index.php?/api/v2/delete_milestone/{{milestone_id}}",
+							"host": [
+								"{{baseURL}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_milestone/{{milestone_id}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{login}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
