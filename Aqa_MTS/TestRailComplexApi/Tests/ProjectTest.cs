@@ -3,7 +3,6 @@ using NLog;
 using TestRailComplexApi.Models;
 
 namespace TestRailComplexApi.Tests;
-
 public class ProjectTest : BaseApiTest
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
