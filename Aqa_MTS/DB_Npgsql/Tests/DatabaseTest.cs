@@ -30,7 +30,7 @@ public class DatabaseTest
         _logger.Info("GetAllCustomersTest started...");
         var customersList = _customerService?.GetAllCustomers();
 
-        Assert.That(customersList.Count, Is.EqualTo(4));
+        Assert.That(customersList.Count, Is.EqualTo(8));
 
         _logger.Info("GetAllCustomersTest completed...");
     }
