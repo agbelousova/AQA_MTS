@@ -65,17 +65,17 @@ public class MilestoneTest : BaseApiTest
     [Order(3)]
     public void UpdateMilestoneTest()
     {
-        var milestone_upp = new Milestone
+        var milestone = new Milestone
         {
-            IdProject = _milestone.IdProject,
+            Id = _milestone.Id,
             Name = "Update",
             Description = "Description, Update",
             IsCompleted = true
         };
 
-        var actualMilestone_upp = MilestoneService!.UpdateMilestone(milestone_upp);
-        milestone_upp = actualMilestone_upp.Result;
-        _logger.Info(milestone_upp.ToString());
+        var actualMilestone_upp = MilestoneService!.UpdateMilestone(milestone);
+        milestone = actualMilestone_upp.Result;
+        _logger.Info(milestone.ToString());
     }
     
     [Test]

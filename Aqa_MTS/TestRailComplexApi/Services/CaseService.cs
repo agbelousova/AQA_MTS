@@ -14,6 +14,15 @@ public class CaseService : ICaseService, IDisposable
         _client = client;
     }
     
+    public Task<Case> AddCase(string sectionId, Case newCase)
+    {
+        var request = new RestRequest("index.php?/api/v2/add_case/{section_id}", Method.Post)
+            .AddUrlSegment("section_id", sectionId)
+            .AddJsonBody(newCase);
+
+        return _client.ExecuteAsync<Case>(request);
+    }
+    
     public Task<Case> GetCase(string caseId)
     {
         var request = new RestRequest("index.php?/api/v2/get_case/{case_id}")
@@ -22,10 +31,10 @@ public class CaseService : ICaseService, IDisposable
         return _client.ExecuteAsync<Case>(request);
     }
 
-    public Task<Case> UpdateCase(Case caseUpdate)
+    public Task<Case> UpdateCase(Case caseUpdate, string idCase)
     {
         var request = new RestRequest("index.php?/api/v2/update_case/{case_id}", Method.Post)
-            .AddUrlSegment("case_id", caseUpdate.Id)
+            .AddUrlSegment("case_id", idCase)
             .AddJsonBody(caseUpdate);
         
         return _client.ExecuteAsync<Case>(request);
