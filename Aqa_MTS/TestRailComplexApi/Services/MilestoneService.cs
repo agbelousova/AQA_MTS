@@ -49,6 +49,15 @@ public class MilestoneService : IMilestoneService, IDisposable
         
         return _client.ExecuteAsync(request).Result.StatusCode;
     }
+    
+    public Task<RestResponse> AddMilstoneForSchema(string projectId, Milestone milestone)
+    {
+        var request = new RestRequest("index.php?/api/v2/add_milestone/{project_id}", Method.Post)
+            .AddUrlSegment("project_id", projectId)
+            .AddJsonBody(milestone);
+
+        return _client.ExecuteAsync(request);
+    }
 
     public void Dispose()
     {

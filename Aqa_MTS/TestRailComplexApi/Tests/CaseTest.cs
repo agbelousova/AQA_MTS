@@ -11,27 +11,28 @@ public class CaseTest : BaseApiTest
     private Project _project = null!;
     private Case _case = null!;
     private Section _section = null!;
-    
+
     [Test]
     [Order(1)]
     public void AddProjectTest()
     {
         _project = new Project
         {
-            Name = "WP Test 1",
-            Announcement = "Some description!!!",
+            Name = "Test 1",
+            Announcement = "Some description!",
             ShowAnnouncement = true,
             SuiteMode = 1
         };
 
         var actualProject = ProjectService!.AddProject(_project);
-        
+
         // Блок проверок
         Assert.Multiple(() =>
         {
             Assert.That(actualProject.Result.Name, Is.EqualTo(_project.Name));
             Assert.That(actualProject.Result.Announcement, Is.EqualTo(_project.Announcement));
             Assert.That(actualProject.Result.SuiteMode, Is.EqualTo(_project.SuiteMode));
+            Assert.That(actualProject.Status.Equals(HttpStatusCode.OK));
         });
 
         _project = actualProject.Result;
@@ -47,13 +48,14 @@ public class CaseTest : BaseApiTest
             Name = "Section Test",
             Description = "Description Section"
         };
-        
-        var actualSection = SectionServices!.AddSection(_project.Id.ToString(),_section);
-        
+
+        var actualSection = SectionServices!.AddSection(_project.Id.ToString(), _section);
+
         Assert.Multiple(() =>
         {
             Assert.That(actualSection.Result.Name, Is.EqualTo(_section.Name));
             Assert.That(actualSection.Result.Description, Is.EqualTo(_section.Description));
+            Assert.That(actualSection.Status.Equals(HttpStatusCode.OK));
         });
 
         _section = actualSection.Result;
@@ -70,20 +72,24 @@ public class CaseTest : BaseApiTest
         };
 
         var caseNew = CaseService!.AddCase(_section.Id.ToString(), _case);
-        
+
         _case = caseNew.Result;
         _logger.Info(_case.ToString());
-        
-        Assert.That(caseNew.Result.Title, Is.EqualTo(_case.Title));
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(caseNew.Result.Title, Is.EqualTo(_case.Title));
+            Assert.That(caseNew.Status.Equals(HttpStatusCode.OK));
+        });
     }
-    
+
     [Test]
     [Order(4)]
     public void GetCaseTest()
     {
         var actualCase = CaseService?.GetCase(_case.Id.ToString());
         _logger.Info(actualCase.Result.ToString);
-        
+
         Assert.Multiple(() =>
         {
             Assert.That(actualCase.Result.Title, Is.EqualTo(_case.Title));
@@ -96,7 +102,6 @@ public class CaseTest : BaseApiTest
     [Order(5)]
     public void UpdateCaseTest()
     {
-        
         var caseUpdate = new Case
         {
             PriorityId = 2,
@@ -106,6 +111,13 @@ public class CaseTest : BaseApiTest
         var actualCase = CaseService!.UpdateCase(caseUpdate, _case.Id.ToString());
         _case = actualCase.Result;
         _logger.Info(_case.ToString());
+        
+        Assert.Multiple(() =>
+        {
+            Assert.That(actualCase.Result.Title, Is.EqualTo(_case.Title));
+            Assert.That(actualCase.Result.Id, Is.EqualTo(_case.Id));
+            Assert.That(actualCase.Status.Equals(HttpStatusCode.OK));
+        });
     }
 
     [Test]
@@ -114,10 +126,10 @@ public class CaseTest : BaseApiTest
     {
         var actualCase =
             CaseService!.MoveCaseToSection(_section.Id.ToString());
-
+        
         Assert.That(actualCase == HttpStatusCode.OK);
     }
-    
+
     [Test]
     [Order(7)]
     public void DeleteCaseTest()

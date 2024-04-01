@@ -1,6 +1,7 @@
 using NLog;
 using TestRailComplexApi.Models;
 using System.Diagnostics;
+using System.Net;
 
 namespace TestRailComplexApi.Tests;
 
@@ -30,6 +31,7 @@ public class MilestoneTest : BaseApiTest
             Assert.That(actualProject.Result.Name, Is.EqualTo(_project.Name));
             Assert.That(actualProject.Result.Announcement, Is.EqualTo(_project.Announcement));
             Assert.That(actualProject.Result.SuiteMode, Is.EqualTo(_project.SuiteMode));
+            Assert.That(actualProject.Status.Equals(HttpStatusCode.OK));
         });
 
         _project = actualProject.Result;
@@ -55,6 +57,7 @@ public class MilestoneTest : BaseApiTest
             
             Assert.That(actualMilestone.Result.Name, Is.EqualTo(_milestone.Name));
             Assert.That(actualMilestone.Result.Description, Is.EqualTo(_milestone.Description));
+            Assert.That(actualMilestone.Status.Equals(HttpStatusCode.OK));
         });
 
         _milestone = actualMilestone.Result;
@@ -76,6 +79,14 @@ public class MilestoneTest : BaseApiTest
         var actualMilestone_upp = MilestoneService!.UpdateMilestone(milestone);
         milestone = actualMilestone_upp.Result;
         _logger.Info(milestone.ToString());
+        
+        Assert.Multiple(() =>
+        {
+            
+            Assert.That(actualMilestone_upp.Result.Name, Is.EqualTo(_milestone.Name));
+            Assert.That(actualMilestone_upp.Result.Description, Is.EqualTo(_milestone.Description));
+            Assert.That(actualMilestone_upp.Status.Equals(HttpStatusCode.OK));
+        });
     }
     
     [Test]
@@ -84,6 +95,7 @@ public class MilestoneTest : BaseApiTest
     {
         var milestones = MilestoneService?.GetMilestones(_milestone.IdProject.ToString()).Result;
         _logger.Info(milestones.Size);
+        
         foreach (var milestone in milestones.MilestoneList)
         {
             _logger.Info(milestone.ToString);
