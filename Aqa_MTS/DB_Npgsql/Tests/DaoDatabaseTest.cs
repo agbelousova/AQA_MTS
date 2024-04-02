@@ -16,6 +16,24 @@ public class DaoDatabaseTest
     {
         _simpleDbConnector = new DBConnector();
         _customerDao = new CustomerDao(_simpleDbConnector.Connection);
+        
+        _customerDao.Drop();
+        _customerDao.Create();
+
+        _customerDao?.Add(new Customer
+        {
+            Firstname = "Ольга",
+            Lastname = "Петрова",
+            Email = "op@test.com",
+            Age = 25
+        });
+        _customerDao?.Add(new Customer
+        {
+            Firstname = "Гриша",
+            Lastname = "Смирнов",
+            Email = "gs@test.com",
+            Age = 20
+        });
     }
 
     [OneTimeTearDown]
@@ -30,7 +48,7 @@ public class DaoDatabaseTest
         _logger.Info("GetAllCustomersTest started...");
         var customersList = _customerDao?.GetAllCustomers();
 
-        Assert.That(customersList, Has.Count.GreaterThan(2));
+        Assert.That(customersList, Has.Count.GreaterThan(2));  //больше чем 2
 
         _logger.Info("GetAllCustomersTest completed...");
     }

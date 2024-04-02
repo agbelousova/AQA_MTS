@@ -28,7 +28,9 @@ public class CustomerDao : ICustomerDao
             {
                 Id = reader.GetInt32(0),
                 Firstname = reader.GetString(reader.GetOrdinal("firstname")),
-                Lastname = reader.GetString(reader.GetOrdinal("lastname"))
+                Lastname = reader.GetString(reader.GetOrdinal("lastname")),
+                Email = reader.GetString(reader.GetOrdinal("email")),
+                Age = reader.GetInt32(reader.GetOrdinal("age"))
             };
             
             _logger.Info(customer.ToString);
