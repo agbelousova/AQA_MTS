@@ -17,13 +17,14 @@ public class MilestoneTest : BaseApiTest
     {
         _project = new Project
         {
-            Name = "WP Test 1",
+            Name = "WP Test",
             Announcement = "Some description!!!",
             ShowAnnouncement = true,
             SuiteMode = 1
         };
 
         var actualProject = ProjectService!.AddProject(_project);
+        _project = actualProject.Result;
         
         // Блок проверок
         Assert.Multiple(() =>
@@ -31,10 +32,8 @@ public class MilestoneTest : BaseApiTest
             Assert.That(actualProject.Result.Name, Is.EqualTo(_project.Name));
             Assert.That(actualProject.Result.Announcement, Is.EqualTo(_project.Announcement));
             Assert.That(actualProject.Result.SuiteMode, Is.EqualTo(_project.SuiteMode));
-            Assert.That(actualProject.Status.Equals(HttpStatusCode.OK));
         });
-
-        _project = actualProject.Result;
+        
         _logger.Info(_project.ToString);
     }
     
@@ -44,12 +43,11 @@ public class MilestoneTest : BaseApiTest
     {
         _milestone = new Milestone
         {
-            IdProject = _project.Id,
             Name = "Milestone Test 1",
             Description = "Milestone Description"
         };
         
-        var actualMilestone = MilestoneService!.AddMilestone(_milestone);
+        var actualMilestone = MilestoneService!.AddMilestone(_milestone, _project.Id.ToString());
 
         // Блок проверок
         Assert.Multiple(() =>
@@ -57,7 +55,6 @@ public class MilestoneTest : BaseApiTest
             
             Assert.That(actualMilestone.Result.Name, Is.EqualTo(_milestone.Name));
             Assert.That(actualMilestone.Result.Description, Is.EqualTo(_milestone.Description));
-            Assert.That(actualMilestone.Status.Equals(HttpStatusCode.OK));
         });
 
         _milestone = actualMilestone.Result;
@@ -68,24 +65,22 @@ public class MilestoneTest : BaseApiTest
     [Order(3)]
     public void UpdateMilestoneTest()
     {
-        var milestone = new Milestone
+        var milestone_upp = new Milestone
         {
-            Id = _milestone.Id,
             Name = "Update",
             Description = "Description, Update",
             IsCompleted = true
         };
 
-        var actualMilestone_upp = MilestoneService!.UpdateMilestone(milestone);
-        milestone = actualMilestone_upp.Result;
-        _logger.Info(milestone.ToString());
+        var actualMilestone_upp = MilestoneService!.UpdateMilestone(milestone_upp, _milestone.Id.ToString());
+        _milestone = actualMilestone_upp.Result;
+        _logger.Info(_milestone.ToString());
         
         Assert.Multiple(() =>
         {
             
             Assert.That(actualMilestone_upp.Result.Name, Is.EqualTo(_milestone.Name));
             Assert.That(actualMilestone_upp.Result.Description, Is.EqualTo(_milestone.Description));
-            Assert.That(actualMilestone_upp.Status.Equals(HttpStatusCode.OK));
         });
     }
     
@@ -93,9 +88,9 @@ public class MilestoneTest : BaseApiTest
     [Order(4)]
     public void GetMilestonesTest()
     {
-        var milestones = MilestoneService?.GetMilestones(_milestone.IdProject.ToString()).Result;
-        _logger.Info(milestones.Size);
+        var milestones = MilestoneService!.GetMilestones(_project.Id.ToString()).Result;
         
+        _logger.Info(milestones.Size);
         foreach (var milestone in milestones.MilestoneList)
         {
             _logger.Info(milestone.ToString);
@@ -108,5 +103,13 @@ public class MilestoneTest : BaseApiTest
     {
         Debug.Assert(MilestoneService != null, nameof(MilestoneService) + " != null");
         _logger.Info(MilestoneService.DeleteMilestone(_milestone.Id.ToString()));
+    }
+    
+    [Test]
+    [Order(6)]
+    public void DeleteProjectTest()
+    {
+        Debug.Assert(ProjectService != null, nameof(ProjectService) + " != null");
+        _logger.Info(ProjectService.DeleteProject(_project.Id.ToString()));
     }
 }

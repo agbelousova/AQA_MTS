@@ -49,12 +49,15 @@ public class CaseService : ICaseService, IDisposable
         return _client.ExecuteAsync(request).Result.StatusCode;
     }
 
-    public HttpStatusCode MoveCaseToSection(string sectionId)
+    public HttpStatusCode MoveCaseToSection(string sectionId, string newSectionId, string caseId)
     {
         var request = new RestRequest("index.php?/api/v2/move_cases_to_section/{section_id}", Method.Post)
             .AddUrlSegment("section_id", sectionId)
-            .AddJsonBody("{}");
-        
+            .AddJsonBody("{" +
+                         $"\"section_id\": {newSectionId}," +
+                         $"\"case_ids\": [{caseId}]" +
+                         "}");
+
         return _client.ExecuteAsync(request).Result.StatusCode;
     }
 

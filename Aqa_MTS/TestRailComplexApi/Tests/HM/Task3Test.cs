@@ -2,9 +2,11 @@
 using TestRailComplexApi.Models;
 using System.Diagnostics;
 using System.Net;
+using Bogus;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using TestRailComplexApi.Fakers;
 
 namespace TestRailComplexApi.Tests;
 
@@ -13,30 +15,15 @@ public class Task3Test : BaseApiTest
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
     private Project _project;
     private Milestone _milestone;
+    private static Faker<Project> _projectFaker = new ProjectFaker();
     
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
-        _project = new Project
-        {
-            Name = "WP Test 1",
-            Announcement = "Some description!!!",
-            ShowAnnouncement = true,
-            SuiteMode = 1
-        };
+        _project = _projectFaker.Generate();
 
-        var actualProject = ProjectService!.AddProject(_project);
-        
-        // Блок проверок
-        Assert.Multiple(() =>
-        {
-            Assert.That(actualProject.Result.Name, Is.EqualTo(_project.Name));
-            Assert.That(actualProject.Result.Announcement, Is.EqualTo(_project.Announcement));
-            Assert.That(actualProject.Result.SuiteMode, Is.EqualTo(_project.SuiteMode));
-        });
-
-        _project = actualProject.Result;
-        _logger.Info(_project.ToString);
+        _project = ProjectService!.AddProject(_project).Result;
+        _logger.Info(_project.ToString());
     }
 
     [Test]

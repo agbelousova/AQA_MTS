@@ -23,19 +23,19 @@ public class MilestoneService : IMilestoneService, IDisposable
         return melistones;
     }
 
-    public Task<Milestone> AddMilestone(Milestone milestone)
+    public Task<Milestone> AddMilestone(Milestone milestone, string project_id)
     {
         var request = new RestRequest("index.php?/api/v2/add_milestone/{project_id}", Method.Post)
-            .AddUrlSegment("project_id", milestone.IdProject)
+            .AddUrlSegment("project_id", project_id)
             .AddJsonBody(milestone);
         
         return _client.ExecuteAsync<Milestone>(request);
     }
 
-    public Task<Milestone> UpdateMilestone(Milestone milestone)
+    public Task<Milestone> UpdateMilestone(Milestone milestone, string milestone_id)
     {
         var request = new RestRequest("index.php?/api/v2/update_milestone/{milestone_id}", Method.Post)
-            .AddUrlSegment("milestone_id", milestone.Id)
+            .AddUrlSegment("milestone_id", milestone_id)
             .AddJsonBody(milestone);
         
         return _client.ExecuteAsync<Milestone>(request);

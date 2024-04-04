@@ -9,5 +9,5 @@ public interface ICaseService
     Task<Case> GetCase(string caseId);
     Task<Case> UpdateCase(Case caseUpdate, string idCase);
     HttpStatusCode DeleteCase(string caseId);
-    HttpStatusCode MoveCaseToSection (string sectionId);
+    HttpStatusCode MoveCaseToSection (string sectionId, string newSectionId, string caseId);
 }
